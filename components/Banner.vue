@@ -31,7 +31,7 @@ export default {
         dots: true,
         slidesToShow: 3,
         autoplay: true,
-        speed: 4000,
+        speed: 1000,
         autoplaySpeed: 4000,
       },
       banners: [],
