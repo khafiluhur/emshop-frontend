@@ -6,7 +6,9 @@
           <p class="text-title font-bold">Pilihan Lain Untukmu</p>
         </div>
         <div class="my-auto">
-          <a class="mx-3 font-light">Lihat Semua</a>
+          <nuxt-link to="/exclusive/randomItem">
+            <a class="mx-3 font-light">Lihat Semua</a>
+          </nuxt-link>
         </div>
       </div>
     </div>

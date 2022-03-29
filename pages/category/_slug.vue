@@ -27,9 +27,15 @@ const headers = {
 export default {
   name: 'Category',
   components: { Header, CategoryItem, Description, Footer },
+  head() {
+    return {
+      title: this.title + ' | EMSHOP',
+    }
+  },
   data() {
     return {
       categories: [],
+      title: '',
       slug: this.$route.params.slug,
       path: 'https://api.shobaro.com',
     }
@@ -41,6 +47,7 @@ export default {
         { headers: headers }
       )
       this.categories = res.data.data
+      this.title = res.data.data.name
     } catch (error) {
       console.log(error)
     }

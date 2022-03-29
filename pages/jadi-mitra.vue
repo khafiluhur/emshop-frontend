@@ -27,6 +27,9 @@ export default {
       slug: this.$route.name,
     }
   },
+  head: {
+    title: 'Jadi Mitra | EMSHOP',
+  },
 }
 </script>
 

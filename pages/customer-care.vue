@@ -35,5 +35,8 @@ export default {
       slug: this.$route.name,
     }
   },
+  head: {
+    title: 'Customer Care | EMSHOP',
+  },
 }
 </script>

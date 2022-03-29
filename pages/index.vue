@@ -33,6 +33,9 @@ export default {
     Description,
     Footer,
   },
+  head: {
+    title: 'Home | EMSHOP',
+  },
 }
 </script>
 

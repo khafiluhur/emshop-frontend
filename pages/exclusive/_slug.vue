@@ -3,7 +3,8 @@
     <Header />
     <div class="mt-10 text-center">
       <p class="font-bold" v-if="this.slug == 'bestSeller'">Best Seller</p>
-      <p class="font-bold" v-else>New Item</p>
+      <p class="font-bold" v-else-if="this.slug === 'newItem'">New Item</p>
+      <p class="font-bold" v-else>Pilihan Lain Untukmu</p>
     </div>
     <ExclusiveItem />
     <Description />
@@ -24,8 +25,14 @@ export default {
     Description,
     Footer,
   },
+  head() {
+    return {
+      title: this.slug + ' | EMSHOP',
+    }
+  },
   data() {
     return {
+      title: '',
       slug: this.$route.params.slug,
     }
   },

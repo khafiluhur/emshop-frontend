@@ -244,10 +244,16 @@ const headers = {
 export default {
   name: 'Product',
   components: { Header, RandomItem, Footer },
+  head() {
+    return {
+      title: this.title + ' | EMSHOP',
+    }
+  },
   data() {
     return {
       products: [],
       links: [],
+      title: '',
       slug: this.$route.params.slug,
       path: 'https://api.shobaro.com',
     }
@@ -259,6 +265,7 @@ export default {
       })
       this.products = res.data.data
       this.links = res.data.data.link
+      this.title = res.data.data.name
     } catch (error) {
       console.log(error)
     }

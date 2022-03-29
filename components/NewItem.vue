@@ -75,7 +75,6 @@ export default {
         }
       )
       this.products = res.data.data.data
-      console.log(this.products)
     } catch (error) {
       console.log(error)
     }
