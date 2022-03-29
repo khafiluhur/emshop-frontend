@@ -259,7 +259,6 @@ export default {
       })
       this.products = res.data.data
       this.links = res.data.data.link
-      console.log()
     } catch (error) {
       console.log(error)
     }
