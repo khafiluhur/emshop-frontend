@@ -1,6 +1,6 @@
 <template>
   <div class="mx-12 2xl:mx-96 my-10">
-    <div class="grid grid-cols-5 gap-4 mb-10">
+    <div class="grid grid-cols-5 gap-4 mb-10" v-if="products.length > 0">
       <div
         class="card shadow-md"
         v-for="product in products"
@@ -25,6 +25,9 @@
           </div>
         </NuxtLink>
       </div>
+    </div>
+    <div v-else>
+      <p class="my-5 text-center">Data Not Found</p>
     </div>
     <div class="mb-5">
       <div class="striped-border"></div>

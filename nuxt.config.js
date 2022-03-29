@@ -54,11 +54,34 @@ export default {
     },
     manifest: {
       name: 'EMSHOP',
+      app_name: 'EMSHOP',
       short_name: 'EMSHOP',
       lang: 'en',
-      icon: {
-        source: '',
-      },
+      display: 'standalone',
+      description:
+        'OFFICIAL MOBILE APPS OF eMSHOP Kami hadir memberikan produk inovatif dengan kualitas dan harga terbaik, hadir 24 jam melalui channel 79 & 88 Indovision, MNC Play channel 79&88, Indihome channel 110 dan First Media channel 12. Untuk anda dengan aktifitas beragam, kami memberikan kemudahan akses melalui website https://emshop.id maupun mobile apps yang dapat di download di Google Store serta App Store. Beragam produk kami tawarkan untuk memenuhi kebutuhan anda seperti produk Kesehatan, Kecantikan, Fashion, Elektronik &Gadget, Perlengkapan Rumah Tangga, Perlengkapan Dapur sampai Peralatan Olah Raga. Jadilah bagian dari kami dan dapatkan produk-produk eksklusif hanya untuk anda karena eMSHOP THE BEST ONLINE SPECIALTY STORE',
+      icons: [
+        {
+          src: '/icon-72x72.png',
+          sizes: '72x',
+          type: 'image/png',
+        },
+        {
+          src: '/icon-96x96.png',
+          sizes: '96x',
+          type: 'image/png',
+        },
+        {
+          src: '/icon-144x144.png',
+          sizes: '144x',
+          type: 'image/png',
+        },
+        {
+          src: '/icon-192x192.png',
+          sizes: '192x',
+          type: 'image/png',
+        },
+      ],
     },
   },
 

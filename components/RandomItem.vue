@@ -12,7 +12,7 @@
         </div>
       </div>
     </div>
-    <div class="mb-10" id="bestSeller">
+    <div class="mb-10" id="bestSeller" v-if="products.length > 0">
       <VueSlickCarousel v-bind="settings" v-if="Object.keys(products).length">
         <div
           class="card shadow-md"
@@ -39,6 +39,9 @@
           </NuxtLink>
         </div>
       </VueSlickCarousel>
+    </div>
+    <div v-else>
+      <p class="my-5 text-center">Data Not Found</p>
     </div>
     <div class="mb-5">
       <div class="striped-border"></div>
@@ -70,9 +73,12 @@ export default {
   },
   async created() {
     try {
-      const res = await axios.get(this.path + '/api/product', {
-        headers: headers,
-      })
+      const res = await axios.get(
+        this.path + '/api/product/exclusive/randomItem',
+        {
+          headers: headers,
+        }
+      )
       this.products = res.data.data
     } catch (error) {
       console.log(error)
