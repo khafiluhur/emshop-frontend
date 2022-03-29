@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-12 my-5">
+  <div class="mx-12 2xl:mx-96 my-5">
     <div class="flex flex-row mb-10">
       <div class="basis-full" v-for="category in categories" :key="category.id">
         <NuxtLink :to="'/category/' + category.slug">

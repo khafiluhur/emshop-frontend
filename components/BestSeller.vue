@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-12 my-5">
+  <div class="mx-12 2xl:mx-96 my-5">
     <div>
       <div class="flex flex-row py-3 bg-header-first">
         <div class="mr-auto flex flex-row">

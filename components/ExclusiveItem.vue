@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-12 my-10">
+  <div class="mx-12 2xl:mx-96 my-10">
     <div class="grid grid-cols-5 gap-4 mb-10">
       <div
         class="card shadow-md"
@@ -54,7 +54,6 @@ export default {
         { headers: headers }
       )
       this.products = res.data.data.data
-      console.log(this.products)
     } catch (error) {
       console.log(error)
     }

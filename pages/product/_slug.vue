@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header />
-    <div class="">
+    <div class="2xl:mx-96">
       <div class="mx-12 mt-10 flex">
         <nuxt-link to="/">
           <p style="color: #999999">Home</p>

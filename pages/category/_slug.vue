@@ -1,8 +1,12 @@
 <template>
   <div>
     <Header />
-    <div class="my-4">
-        <img style="width: 100%" :src="path + '/assets/imgs/category/' + this.categories.img" alt="" />
+    <div class="my-4 2xl:mx-96">
+      <img
+        style="width: 100%"
+        :src="path + '/assets/imgs/category/' + this.categories.img"
+        alt=""
+      />
     </div>
     <CategoryItem />
     <Description />
@@ -11,17 +15,19 @@
 </template>
 
 <script>
-import Header from "../../components/Header"
-import CategoryItem from "../../components/CategoryItem"
-import Description from "../../components/Description"
-import Footer from "../../components/Footer"
+import Header from '../../components/Header'
+import CategoryItem from '../../components/CategoryItem'
+import Description from '../../components/Description'
+import Footer from '../../components/Footer'
 
-const axios = require('axios').default;
-const headers = {'Authorization': 'Bearer 1|3mTRZGnfTJ4wB0iX7LbAQbEKo6ZtQIbB56zxbNpA'}
+const axios = require('axios').default
+const headers = {
+  Authorization: 'Bearer 1|3mTRZGnfTJ4wB0iX7LbAQbEKo6ZtQIbB56zxbNpA',
+}
 export default {
   name: 'Category',
   components: { Header, CategoryItem, Description, Footer },
-  data () {
+  data() {
     return {
       categories: [],
       slug: this.$route.params.slug,
@@ -30,15 +36,16 @@ export default {
   },
   async created() {
     try {
-      const res = await axios.get(this.path + '/api/product/category/' + this.slug,  {headers: headers});
-      this.categories = res.data.data;
+      const res = await axios.get(
+        this.path + '/api/product/category/' + this.slug,
+        { headers: headers }
+      )
+      this.categories = res.data.data
     } catch (error) {
-      console.log(error);
+      console.log(error)
     }
   },
 }
 </script>
 
-<style>
-
-</style>
+<style></style>
