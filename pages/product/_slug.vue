@@ -39,7 +39,7 @@
               <div class="col-10 text-start mb-5">
                 <h4
                   class="text-price font-bold mb-0"
-                  style="color: red; font-size: 18px"
+                  style="color: #ff0000; font-size: 18px"
                 >
                   Rp{{ this.products.price }}
                 </h4>
