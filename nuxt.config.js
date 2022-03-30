@@ -56,10 +56,6 @@ export default {
       title: 'EMSHOP',
       author: 'EMSHOP',
     },
-    icon: {
-      source: '/icon-192x192.png',
-      sizes: '192',
-    },
     manifest: {
       name: 'EMSHOP',
       short_name: 'EMSHOP',
