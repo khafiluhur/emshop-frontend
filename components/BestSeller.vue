@@ -6,8 +6,8 @@
           <p class="text-title font-bold">Terlaris</p>
         </div>
         <div class="my-auto">
-          <nuxt-link to="/exclusive/bestSeller">
-            <a class="mx-3 font-light">Lihat Semua</a>
+          <nuxt-link to="/exclusive/bestSeller" class="mx-3 font-light">
+            Lihat Semua
           </nuxt-link>
         </div>
       </div>
