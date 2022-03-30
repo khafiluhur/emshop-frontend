@@ -51,7 +51,7 @@ export default {
   },
   async created() {
     try {
-      const res = await axios.get(this.path + '/api/product/', {
+      const res = await axios.get(this.path + '/api/product', {
         headers: headers,
       })
       this.products = res.data.data
