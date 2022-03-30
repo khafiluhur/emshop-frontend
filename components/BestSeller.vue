@@ -140,7 +140,7 @@ export default {
 .card-text-dics {
   font-size: 14px;
   font-weight: 700;
-  color: red;
+  color: #ff0000;
 }
 #bestSeller .slick-arrow {
   background-color: white;

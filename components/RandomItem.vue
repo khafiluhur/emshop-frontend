@@ -119,7 +119,7 @@ export default {
 .card-text-disc {
   font-size: 14px;
   font-weight: bold;
-  color: red;
+  color: #ff0000;
 }
 .card-body {
   flex: 1 1 auto;
