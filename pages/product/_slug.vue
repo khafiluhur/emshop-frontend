@@ -280,7 +280,7 @@ export default {
 .card-text-disc {
   font-size: 14px;
   font-weight: bold;
-  color: red;
+  color: #ff0000;
 }
 .text-code-item {
   font-size: 14px;
@@ -291,7 +291,7 @@ export default {
   width: 80px;
 }
 .dicount {
-  background-color: red;
+  background-color: #ff0000;
   color: white;
   border-radius: 4px;
 }

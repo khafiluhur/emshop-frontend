@@ -118,17 +118,26 @@
                 <a
                   target="_blank"
                   href="https://www.mncgroup.com/microsite/mnc-e-commerce-ltd"
+                  aria-label="mnc-ecommerce"
                 >
                   <img width="90" src="../static/mnc-ecommerce.png" alt="" />
                 </a>
               </div>
               <div class="col text-start">
-                <a target="_blank" href="https://emshop.id/">
+                <a
+                  target="_blank"
+                  href="https://emshop.id/"
+                  aria-label="emshop"
+                >
                   <img width="90" src="../static/mshop.png" alt="" />
                 </a>
               </div>
               <div class="col text-start">
-                <a target="_blank" href="https://www.misteraladin.com/">
+                <a
+                  target="_blank"
+                  href="https://www.misteraladin.com/"
+                  aria-label="mister-aladin"
+                >
                   <img width="90" src="../static/mister-aladin.png" alt="" />
                 </a>
               </div>
