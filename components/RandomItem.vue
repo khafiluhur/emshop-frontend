@@ -33,7 +33,9 @@
                 <h5 class="card-text-promo line-through">
                   Rp.{{ product.disc_price }}
                 </h5>
-                <h5 class="card-text-dics font-bold">-{{ product.disc }}%</h5>
+                <h5 class="card-text-dics font-semibold">
+                  -{{ product.disc }}%
+                </h5>
               </div>
             </div>
           </NuxtLink>
