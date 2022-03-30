@@ -73,12 +73,9 @@ export default {
   },
   async created() {
     try {
-      const res = await axios.get(
-        this.path + '/api/product/exclusive/randomItem',
-        {
-          headers: headers,
-        }
-      )
+      const res = await axios.get(this.path + '/api/product/exclusive', {
+        headers: headers,
+      })
       this.products = res.data.data
     } catch (error) {
       console.log(error)
