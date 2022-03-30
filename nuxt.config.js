@@ -60,8 +60,20 @@ export default {
       name: 'EMSHOP',
       short_name: 'EMSHOP',
       lang: 'en',
+      display: 'standalone',
       useWebmanifestExtension: false,
-      icons: [],
+      icons: [
+        {
+          source: '/icon-144x144.png',
+          fileName: 'icon-144x144.png',
+          size: '144x144',
+        },
+        {
+          source: '/icon-192x192.png',
+          fileName: 'icon-192x192.png',
+          size: '192x192',
+        },
+      ],
       theme_color: '#3374DD',
     },
   },
