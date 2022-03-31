@@ -23,7 +23,7 @@
           <NuxtLink :to="'/product/' + product.slug">
             <img
               class="card-img-top"
-              :src="path + '/assets/imgs/products/' + product.img"
+              :src="path_image + '/assets/imgs/products/' + product.img"
               alt="Card image cap"
             />
             <div class="card-body">
@@ -82,7 +82,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .text-title {
   font-size: 26px;
 }

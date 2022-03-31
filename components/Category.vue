@@ -7,7 +7,7 @@
             <img
               class="mx-auto"
               width="56"
-              :src="path + '/assets/imgs/category/' + category.icon"
+              :src="path_image + '/assets/imgs/category/' + category.icon"
               :alt="category.icon"
             />
           </div>
@@ -47,7 +47,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .basis-full {
   width: 100%;
 }

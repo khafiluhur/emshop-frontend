@@ -19,7 +19,7 @@
             <img
               class="border border-1"
               width="300"
-              :src="path + '/assets/imgs/products/' + this.products.img"
+              :src="path_image + '/assets/imgs/products/' + this.products.img"
               :alt="this.products.sku"
             />
           </div>
@@ -273,7 +273,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .title-product {
   font-size: 20px;
 }

@@ -1,10 +1,10 @@
 <template>
-  <div id="banner" class="mx-12 2xl:mx-96 lg:block md:hidden my-5">
+  <div id="banner" class="mx-12 2xl:mx-96 my-5">
     <VueSlickCarousel v-bind="settings" v-if="Object.keys(banners).length">
       <div v-for="banner in banners" :key="banner.id" :size="banner.size">
         <img
           class="rounded-3xl p-3"
-          :src="path + '/assets/imgs/banners/' + banner.img"
+          :src="path_image + '/assets/imgs/banners/' + banner.img"
           :alt="banner.title"
         />
       </div>
@@ -35,6 +35,7 @@ export default {
         autoplaySpeed: 4000,
       },
       banners: [],
+      path_image: 'https://image.shobaro.com',
       path: 'https://api.shobaro.com',
     }
   },
@@ -51,7 +52,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 #banner .slick-dots {
   text-align: left;
   position: initial;

@@ -10,7 +10,7 @@
         <NuxtLink :to="'/product/' + product.slug">
           <img
             class="card-img-top"
-            :src="path + '/assets/imgs/products/' + product.img"
+            :src="path_image + '/assets/imgs/products/' + product.img"
             alt="Card image cap"
           />
           <div class="card-body">
@@ -61,7 +61,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .text-title {
   font-size: 26px;
 }
@@ -113,5 +113,11 @@ export default {
 }
 .card-title {
   margin-bottom: 0.75rem;
+  font-size: 14px;
+  text-align: start;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 25px;
+  height: 46px;
 }
 </style>

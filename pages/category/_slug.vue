@@ -4,7 +4,7 @@
     <div class="my-4 2xl:mx-96">
       <img
         style="width: 100%"
-        :src="path + '/assets/imgs/category/' + this.categories.img"
+        :src="path_image + '/assets/imgs/category/' + this.categories.img"
         alt=""
       />
     </div>
@@ -55,4 +55,4 @@ export default {
 }
 </script>
 
-<style></style>
+<style scoped></style>

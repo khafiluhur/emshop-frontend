@@ -33,7 +33,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .striped-border {
   border: 1px dashed #ccc;
 }
