@@ -52,7 +52,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 #banner .slick-dots {
   text-align: left;
   position: initial;

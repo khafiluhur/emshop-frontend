@@ -60,7 +60,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .btn-emshop {
   font-size: 14px;
 }

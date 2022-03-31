@@ -274,7 +274,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .title-product {
   font-size: 20px;
 }

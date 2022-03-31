@@ -51,7 +51,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .text-title-footer {
   font-size: 18px;
   text-align: start;

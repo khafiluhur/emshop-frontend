@@ -178,7 +178,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
