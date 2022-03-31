@@ -4,7 +4,7 @@
     <div class="my-4 2xl:mx-96">
       <img
         style="width: 100%"
-        :src="path_image + '/assets/imgs/category/' + this.categories.img"
+        :src="path_image + '/imgs/category/' + this.categories.img"
         alt=""
       />
     </div>

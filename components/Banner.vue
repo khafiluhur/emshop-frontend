@@ -4,7 +4,7 @@
       <div v-for="banner in banners" :key="banner.id" :size="banner.size">
         <img
           class="rounded-3xl p-3"
-          :src="path_image + '/assets/imgs/banners/' + banner.img"
+          :src="path_image + '/imgs/banners/' + banner.img"
           :alt="banner.title"
         />
       </div>
