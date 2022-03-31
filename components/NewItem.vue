@@ -1,7 +1,7 @@
 <template>
   <div class="mx-12 2xl:mx-96 my-5">
     <div>
-      <div class="flex flex-row py-3 bg-header-first">
+      <div class="flex flex-row py-3">
         <div class="mr-auto flex flex-row">
           <p class="text-title font-bold">Terbaru</p>
         </div>
