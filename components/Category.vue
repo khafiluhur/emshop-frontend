@@ -31,6 +31,7 @@ export default {
   data() {
     return {
       categories: [],
+      path_image: 'https://image.shobaro.com',
       path: 'https://api.shobaro.com',
     }
   },

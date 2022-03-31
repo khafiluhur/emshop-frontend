@@ -63,6 +63,7 @@ export default {
         slidesToShow: 5,
       },
       products: [],
+      path_image: 'https://image.shobaro.com',
       path: 'https://api.shobaro.com',
     }
   },
