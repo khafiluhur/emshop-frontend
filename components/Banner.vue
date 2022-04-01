@@ -60,11 +60,9 @@ export default {
 #banner .slick-prev:before,
 #banner .slick-next:before {
   color: black;
-  font-family: inherit;
   font-size: 32px;
 }
 #banner .slick-arrow {
-  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 20px;
   z-index: 1;
 }
@@ -78,9 +76,6 @@ export default {
 #banner .slick-next {
   width: 42px;
   height: 42px;
-}
-#banner .slick-slider button:hover {
-  background-color: white;
 }
 #banner .slick-dots li button:before {
   font-size: 8px;

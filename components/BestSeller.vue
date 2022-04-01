@@ -149,9 +149,7 @@ export default {
   color: #ff0000;
 }
 #bestSeller .slick-arrow {
-  background-color: white;
   border-radius: 20px;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   z-index: 1;
 }
 #bestSeller .slick-prev {
@@ -165,20 +163,15 @@ export default {
   width: 42px;
   height: 42px;
 }
-#bestSeller .slick-slider button:hover {
-  background-color: white;
-}
 #bestSeller .slick-dots li button:before {
   font-size: 8px;
 }
 #bestSeller .slick-prev:before {
   color: black;
-  font-family: inherit;
   font-size: 32px;
 }
 #bestSeller .slick-next:before {
   color: black;
-  font-family: inherit;
   font-size: 32px;
 }
 </style>
