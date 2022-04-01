@@ -1,11 +1,6 @@
 <template>
   <div>
     <Header />
-    <div class="mt-10 text-center">
-      <p class="font-bold" v-if="this.slug == 'bestSeller'">Best Seller</p>
-      <p class="font-bold" v-else-if="this.slug === 'newItem'">New Item</p>
-      <p class="font-bold" v-else>Pilihan Lain Untukmu</p>
-    </div>
     <ExclusiveItem />
     <Description />
     <Footer />
@@ -39,4 +34,14 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.title-exclusive {
+  width: 200px;
+  height: 20px;
+  background: #eee;
+  background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+  background-size: 200% 100%;
+  -webkit-animation: 1.5s shine linear infinite;
+  animation: 1.5s shine linear infinite;
+}
+</style>

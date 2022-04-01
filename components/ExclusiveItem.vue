@@ -1,6 +1,14 @@
 <template>
   <div class="mx-12 2xl:mx-96 my-10">
-    <div class="grid grid-cols-5 gap-4 mb-10">
+    <div class="mt-10 mb-10 text-center" v-if="this.products.length != 0">
+      <p class="font-bold" v-if="this.slug == 'bestSeller'">Best Seller</p>
+      <p class="font-bold" v-else-if="this.slug === 'newItem'">New Item</p>
+      <p class="font-bold" v-else>Pilihan Lain Untukmu</p>
+    </div>
+    <div class="mt-10 mb-10" v-else>
+      <div class="title-exclusive mx-auto"></div>
+    </div>
+    <div class="grid grid-cols-5 gap-4 mb-10" v-if="this.products.length > 0">
       <div
         class="card shadow-md"
         v-for="product in products"
@@ -24,6 +32,25 @@
             </div>
           </div>
         </NuxtLink>
+      </div>
+    </div>
+    <div class="mb-10" v-else>
+      <div class="flex">
+        <div class="flex-1 p-3">
+          <div class="product rounded-3xl"></div>
+        </div>
+        <div class="flex-1 p-3">
+          <div class="product rounded-3xl"></div>
+        </div>
+        <div class="flex-1 p-3">
+          <div class="product rounded-3xl"></div>
+        </div>
+        <div class="flex-1 p-3">
+          <div class="product rounded-3xl"></div>
+        </div>
+        <div class="flex-1 p-3">
+          <div class="product rounded-3xl"></div>
+        </div>
       </div>
     </div>
     <div class="mb-5">
