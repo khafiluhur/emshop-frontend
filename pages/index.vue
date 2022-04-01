@@ -8,6 +8,7 @@
     <RelateItem />
     <Description />
     <Footer />
+    <NavigationBar />
   </div>
 </template>
 
@@ -20,6 +21,7 @@ import NewItem from '../components/NewItem'
 import RelateItem from '../components/RelateItem'
 import Description from '../components/Description'
 import Footer from '../components/Footer'
+import NavigationBar from '../components/NavigationBar'
 
 export default {
   name: 'IndexPage',
@@ -32,6 +34,7 @@ export default {
     RelateItem,
     Description,
     Footer,
+    NavigationBar,
   },
   head: {
     title: 'Home | EMSHOP',

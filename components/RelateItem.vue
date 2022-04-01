@@ -46,6 +46,9 @@
           </div>
         </div>
       </div>
+      <div class="mb-5">
+        <div class="striped-border"></div>
+      </div>
     </div>
     <div class="mobile">
       <div
@@ -87,9 +90,6 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="mb-5">
-      <div class="striped-border"></div>
     </div>
   </div>
 </template>

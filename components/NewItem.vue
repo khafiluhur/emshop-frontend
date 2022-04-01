@@ -68,6 +68,7 @@
           </div>
         </div>
       </div>
+      <div class="line-border"></div>
     </div>
     <div class="mobile">
       <div>
@@ -76,7 +77,10 @@
             <p class="text-title font-bold">Terbaru</p>
           </div>
           <div class="my-auto">
-            <nuxt-link to="/exclusive/newItem" class="mx-3 font-light">
+            <nuxt-link
+              to="/exclusive/newItem"
+              class="mx-3 font-light mobile-more-all"
+            >
               Lihat Semua
             </nuxt-link>
           </div>
@@ -131,8 +135,8 @@
           </div>
         </div>
       </div>
+      <div class="line-border-mobile"></div>
     </div>
-    <div class="line-border"></div>
   </div>
 </template>
 

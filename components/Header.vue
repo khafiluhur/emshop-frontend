@@ -49,7 +49,7 @@
       </div>
     </div>
     <div class="mobile">
-      <div class="text-center py-5 bg-header-first">
+      <div class="text-center py-5 bg-white">
         <NuxtLink to="/">
           <img width="152" src="../static/logo.png" alt="logo_emshop" />
         </NuxtLink>

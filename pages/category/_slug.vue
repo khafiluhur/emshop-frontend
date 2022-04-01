@@ -1,19 +1,34 @@
 <template>
   <div>
     <Header />
-    <div class="my-4 2xl:mx-96" v-if="categories.length != 0">
-      <img
-        style="width: 100%"
-        :src="path_image + '/imgs/category/' + this.categories.img"
-        alt=""
-      />
+    <div class="desktop">
+      <div class="my-4 2xl:mx-96" v-if="categories.length != 0">
+        <img
+          style="width: 100%"
+          :src="path_image + '/imgs/category/' + this.categories.img"
+          alt=""
+        />
+      </div>
+      <div v-else>
+        <div class="banner-category"></div>
+      </div>
     </div>
-    <div v-else>
-      <div class="banner-category"></div>
+    <div class="mobile">
+      <div class="mb-5" v-if="categories.length != 0">
+        <img
+          style="width: 100%"
+          :src="path_image + '/imgs/category/' + this.categories.img"
+          alt=""
+        />
+      </div>
+      <div v-else>
+        <div class="banner-category"></div>
+      </div>
     </div>
     <CategoryItem />
     <Description />
     <Footer />
+    <NavigationBar />
   </div>
 </template>
 
@@ -22,6 +37,7 @@ import Header from '../../components/Header'
 import CategoryItem from '../../components/CategoryItem'
 import Description from '../../components/Description'
 import Footer from '../../components/Footer'
+import NavigationBar from '../../components/NavigationBar'
 
 const axios = require('axios').default
 const headers = {
@@ -29,7 +45,7 @@ const headers = {
 }
 export default {
   name: 'Category',
-  components: { Header, CategoryItem, Description, Footer },
+  components: { Header, CategoryItem, Description, Footer, NavigationBar },
   head() {
     return {
       title: this.title + ' | EMSHOP',

@@ -48,6 +48,7 @@
           <div class="icon rounded-3xl"></div>
         </div>
       </div>
+      <div class="line-border"></div>
     </div>
     <div class="mobile">
       <div
@@ -88,8 +89,8 @@
           <div class="icon rounded-3xl"></div>
         </div>
       </div>
+      <div class="line-border-mobile"></div>
     </div>
-    <div class="line-border"></div>
   </div>
 </template>
 
@@ -121,6 +122,10 @@ export default {
 </script>
 
 <style>
+.line-border-mobile {
+  height: 12px;
+  background: #f6f6f6;
+}
 .basis-full {
   width: 100%;
 }

@@ -4,6 +4,7 @@
     <ExclusiveItem />
     <Description />
     <Footer />
+    <NavigationBar />
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import Header from '../../components/Header'
 import ExclusiveItem from '../../components/ExclusiveItem'
 import Description from '../../components/Description'
 import Footer from '../../components/Footer'
+import NavigationBar from '../../components/NavigationBar'
 
 export default {
   components: {
@@ -19,6 +21,7 @@ export default {
     ExclusiveItem,
     Description,
     Footer,
+    NavigationBar,
   },
   head() {
     return {
