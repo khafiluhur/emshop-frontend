@@ -1,7 +1,7 @@
 <template>
   <div class="mx-12 2xl:mx-96 my-5">
     <div>
-      <div class="flex flex-row py-3">
+      <div class="flex flex-row py-3" v-if="products.length > 0">
         <div class="mr-auto flex flex-row">
           <p class="text-title font-bold">Terlaris</p>
         </div>
@@ -9,6 +9,14 @@
           <nuxt-link to="/exclusive/bestSeller" class="mx-3 font-light">
             Lihat Semua
           </nuxt-link>
+        </div>
+      </div>
+      <div class="flex flex-row py-3" v-else>
+        <div class="mr-auto flex flex-row">
+          <div class="title-section"></div>
+        </div>
+        <div class="my-auto">
+          <div class="title-section"></div>
         </div>
       </div>
     </div>
@@ -39,6 +47,23 @@
           </NuxtLink>
         </div>
       </VueSlickCarousel>
+      <div class="flex" v-else>
+        <div class="flex-1 p-3">
+          <div class="product rounded-3xl"></div>
+        </div>
+        <div class="flex-1 p-3">
+          <div class="product rounded-3xl"></div>
+        </div>
+        <div class="flex-1 p-3">
+          <div class="product rounded-3xl"></div>
+        </div>
+        <div class="flex-1 p-3">
+          <div class="product rounded-3xl"></div>
+        </div>
+        <div class="flex-1 p-3">
+          <div class="product rounded-3xl"></div>
+        </div>
+      </div>
     </div>
     <div class="line-border"></div>
   </div>
@@ -173,5 +198,22 @@ export default {
 #bestSeller .slick-next:before {
   color: black;
   font-size: 32px;
+}
+.title-section {
+  width: 100px;
+  height: 39px;
+  background: #eee;
+  background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+  background-size: 200% 100%;
+  -webkit-animation: 1.5s shine linear infinite;
+  animation: 1.5s shine linear infinite;
+}
+.product {
+  height: 330px;
+  background: #eee;
+  background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+  background-size: 200% 100%;
+  -webkit-animation: 1.5s shine linear infinite;
+  animation: 1.5s shine linear infinite;
 }
 </style>

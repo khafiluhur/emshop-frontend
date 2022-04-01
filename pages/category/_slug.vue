@@ -1,12 +1,15 @@
 <template>
   <div>
     <Header />
-    <div class="my-4 2xl:mx-96">
+    <div class="my-4 2xl:mx-96" v-if="categories.length != 0">
       <img
         style="width: 100%"
         :src="path_image + '/imgs/category/' + this.categories.img"
         alt=""
       />
+    </div>
+    <div v-else>
+      <div class="banner-category"></div>
     </div>
     <CategoryItem />
     <Description />
@@ -56,4 +59,13 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.banner-category {
+  height: 400px;
+  background: #eee;
+  background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+  background-size: 200% 100%;
+  -webkit-animation: 1.5s shine linear infinite;
+  animation: 1.5s shine linear infinite;
+}
+</style>

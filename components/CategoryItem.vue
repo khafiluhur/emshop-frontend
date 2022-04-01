@@ -26,8 +26,24 @@
         </NuxtLink>
       </div>
     </div>
-    <div v-else>
-      <p class="my-5 text-center">Data Not Found</p>
+    <div class="" v-else>
+      <div class="flex">
+        <div class="flex-1 p-3">
+          <div class="product rounded-3xl"></div>
+        </div>
+        <div class="flex-1 p-3">
+          <div class="product rounded-3xl"></div>
+        </div>
+        <div class="flex-1 p-3">
+          <div class="product rounded-3xl"></div>
+        </div>
+        <div class="flex-1 p-3">
+          <div class="product rounded-3xl"></div>
+        </div>
+        <div class="flex-1 p-3">
+          <div class="product rounded-3xl"></div>
+        </div>
+      </div>
     </div>
     <div class="mb-5">
       <div class="striped-border"></div>

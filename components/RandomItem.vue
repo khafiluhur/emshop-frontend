@@ -1,7 +1,7 @@
 <template>
   <div class="mx-12 2xl:mx-96 my-5">
     <div>
-      <div class="flex flex-row py-3">
+      <div class="flex flex-row py-3" v-if="products.length > 0">
         <div class="mr-auto flex flex-row">
           <p class="text-title font-bold">Pilihan Lain Untukmu</p>
         </div>
@@ -9,6 +9,14 @@
           <nuxt-link to="/exclusive/randomItem" class="mx-3 font-light">
             Lihat Semua
           </nuxt-link>
+        </div>
+      </div>
+      <div class="flex flex-row py-3" v-else>
+        <div class="mr-auto flex flex-row">
+          <div class="title-section"></div>
+        </div>
+        <div class="my-auto">
+          <div class="title-section"></div>
         </div>
       </div>
     </div>
@@ -40,8 +48,22 @@
         </div>
       </VueSlickCarousel>
     </div>
-    <div v-else>
-      <p class="my-5 text-center">Data Not Found</p>
+    <div class="flex" v-else>
+      <div class="flex-1 p-3">
+        <div class="product rounded-3xl"></div>
+      </div>
+      <div class="flex-1 p-3">
+        <div class="product rounded-3xl"></div>
+      </div>
+      <div class="flex-1 p-3">
+        <div class="product rounded-3xl"></div>
+      </div>
+      <div class="flex-1 p-3">
+        <div class="product rounded-3xl"></div>
+      </div>
+      <div class="flex-1 p-3">
+        <div class="product rounded-3xl"></div>
+      </div>
     </div>
     <div class="mb-5">
       <div class="striped-border"></div>
@@ -109,10 +131,12 @@ export default {
   font-weight: bold;
   text-align: start;
   margin-bottom: 8px;
+  color: black;
 }
 .card-text-promo {
   font-size: 14px;
   text-align: start;
+  color: black;
 }
 .card-text-disc {
   font-size: 14px;
@@ -144,10 +168,17 @@ export default {
   text-overflow: ellipsis;
   line-height: 25px;
   height: 46px;
+  color: black;
 }
 .card-text-dics {
   font-size: 14px;
   font-weight: 700;
   color: #ff0000;
+}
+.card:hover {
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 </style>

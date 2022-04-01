@@ -31,13 +31,15 @@
           </div>
         </div>
         <div class="my-auto">
-          <NuxtLink to="/jadi-mitra" class="mx-3 font-light"
+          <NuxtLink to="/jadi-mitra" class="mx-3 font-light text-menu"
             >Jadi Mitra</NuxtLink
           >
-          <NuxtLink to="/customer-care" class="mx-3 font-light"
+          <NuxtLink to="/customer-care" class="mx-3 font-light text-menu"
             >Customer Care</NuxtLink
           >
-          <NuxtLink to="/streaming" class="font-light">Streaming</NuxtLink>
+          <NuxtLink to="/streaming" class="font-light text-menu"
+            >Streaming</NuxtLink
+          >
         </div>
       </div>
       <div class="flex flex-row px-12 2xl:px-96 py-6 bg-header-second">
@@ -79,5 +81,8 @@ export default {
 .vertical-line-border {
   border-left: 1px solid #ccc;
   height: 29px;
+}
+.text-menu:hover {
+  color: #f37727;
 }
 </style>

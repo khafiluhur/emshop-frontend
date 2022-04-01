@@ -1,6 +1,6 @@
 <template>
   <div class="mx-12 2xl:mx-96 my-5">
-    <div class="flex flex-row mb-10">
+    <div class="flex flex-row mb-10" v-if="categories.length > 0">
       <div class="basis-full" v-for="category in categories" :key="category.id">
         <NuxtLink :to="'/category/' + category.slug">
           <div class="icon-category text-center">
@@ -15,6 +15,32 @@
             {{ category.name }}
           </p>
         </NuxtLink>
+      </div>
+    </div>
+    <div class="flex flex-row mb-10" v-else>
+      <div class="basis-full px-3">
+        <div class="icon rounded-3xl"></div>
+      </div>
+      <div class="basis-full px-3">
+        <div class="icon rounded-3xl"></div>
+      </div>
+      <div class="basis-full px-3">
+        <div class="icon rounded-3xl"></div>
+      </div>
+      <div class="basis-full px-3">
+        <div class="icon rounded-3xl"></div>
+      </div>
+      <div class="basis-full px-3">
+        <div class="icon rounded-3xl"></div>
+      </div>
+      <div class="basis-full px-3">
+        <div class="icon rounded-3xl"></div>
+      </div>
+      <div class="basis-full px-3">
+        <div class="icon rounded-3xl"></div>
+      </div>
+      <div class="basis-full px-3">
+        <div class="icon rounded-3xl"></div>
       </div>
     </div>
     <div class="line-border"></div>
@@ -61,5 +87,13 @@ export default {
 .line-border {
   height: 1px;
   background-color: #cccccc;
+}
+.icon {
+  height: 130px;
+  background: #eee;
+  background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+  background-size: 200% 100%;
+  -webkit-animation: 1.5s shine linear infinite;
+  animation: 1.5s shine linear infinite;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="mx-12 2xl:mx-96 my-5">
     <div>
-      <div class="flex flex-row py-3">
+      <div class="flex flex-row py-3" v-if="products.length > 0">
         <div class="mr-auto flex flex-row">
           <p class="text-title font-bold">Terbaru</p>
         </div>
@@ -9,6 +9,14 @@
           <nuxt-link to="/exclusive/newItem" class="mx-3 font-light">
             Lihat Semua
           </nuxt-link>
+        </div>
+      </div>
+      <div class="flex flex-row py-3" v-else>
+        <div class="mr-auto flex flex-row">
+          <div class="title-section"></div>
+        </div>
+        <div class="my-auto">
+          <div class="title-section"></div>
         </div>
       </div>
     </div>
@@ -39,6 +47,23 @@
           </NuxtLink>
         </div>
       </VueSlickCarousel>
+      <div class="flex" v-else>
+        <div class="flex-1 p-3">
+          <div class="product rounded-3xl"></div>
+        </div>
+        <div class="flex-1 p-3">
+          <div class="product rounded-3xl"></div>
+        </div>
+        <div class="flex-1 p-3">
+          <div class="product rounded-3xl"></div>
+        </div>
+        <div class="flex-1 p-3">
+          <div class="product rounded-3xl"></div>
+        </div>
+        <div class="flex-1 p-3">
+          <div class="product rounded-3xl"></div>
+        </div>
+      </div>
     </div>
     <div class="line-border"></div>
   </div>

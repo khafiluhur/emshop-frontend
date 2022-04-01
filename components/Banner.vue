@@ -9,6 +9,17 @@
         />
       </div>
     </VueSlickCarousel>
+    <div class="flex" v-else>
+      <div class="flex-1 p-3">
+        <div class="image rounded-3xl"></div>
+      </div>
+      <div class="flex-1 p-3">
+        <div class="image rounded-3xl"></div>
+      </div>
+      <div class="flex-1 p-3">
+        <div class="image rounded-3xl"></div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -79,5 +90,24 @@ export default {
 }
 #banner .slick-dots li button:before {
   font-size: 8px;
+}
+.image {
+  height: 240px;
+  background: #eee;
+  background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+  background-size: 200% 100%;
+  -webkit-animation: 1.5s shine linear infinite;
+  animation: 1.5s shine linear infinite;
+}
+@-webkit-keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}
+
+@keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
 }
 </style>
