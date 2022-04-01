@@ -58,7 +58,7 @@
         <div class="striped-border"></div>
       </div>
     </div>
-    <div class="mobile mx-2">
+    <div class="mobile mx-2 mb-20">
       <div class="mt-10 mb-10 text-center" v-if="this.products.length != 0">
         <p class="font-bold" v-if="this.slug == 'bestSeller'">Best Seller</p>
         <p class="font-bold" v-else-if="this.slug === 'newItem'">New Item</p>

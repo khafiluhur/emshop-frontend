@@ -156,46 +156,52 @@
                         class="nav-item5 mx-3"
                         v-if="this.links.lazada != 'lazada'"
                       >
-                        <div
-                          class="shadow-sm border border-1 lazada-order btn-order"
-                        >
-                          <img
-                            class="p-1 mt-1 mx-auto block"
-                            width="40"
-                            src="../../static/product/lazada.svg"
-                            alt=""
-                          />
-                        </div>
+                        <a target="_blank" :href="this.links.lazada">
+                          <div
+                            class="shadow-sm border border-1 lazada-order btn-order"
+                          >
+                            <img
+                              class="p-1 mt-1 mx-auto block"
+                              width="40"
+                              src="../../static/product/lazada.svg"
+                              alt=""
+                            />
+                          </div>
+                        </a>
                       </li>
                       <li
                         class="nav-item5"
                         v-if="this.links.blibli != 'blibli'"
                       >
-                        <div
-                          class="shadow-sm border border-1 blibli-order btn-order"
-                        >
-                          <img
-                            class="p-1 mt-1 mx-auto block"
-                            width="35"
-                            src="../../static/product/blibli.svg"
-                            alt=""
-                          />
-                        </div>
+                        <a target="_blank" :href="this.links.blibli">
+                          <div
+                            class="shadow-sm border border-1 blibli-order btn-order"
+                          >
+                            <img
+                              class="p-1 mt-1 mx-auto block"
+                              width="35"
+                              src="../../static/product/blibli.svg"
+                              alt=""
+                            />
+                          </div>
+                        </a>
                       </li>
                       <li
                         class="nav-item5 mx-3"
                         v-if="this.links.bukalapak != 'bukalapak'"
                       >
-                        <div
-                          class="shadow-sm border border-1 bukalapak-order btn-order"
-                        >
-                          <img
-                            class="p-1 mt-1 mx-auto"
-                            width="40"
-                            src="../../static/product/bukalapak.svg"
-                            alt=""
-                          />
-                        </div>
+                        <a target="_blank" :href="this.links.bukalapak">
+                          <div
+                            class="shadow-sm border border-1 bukalapak-order btn-order text-center"
+                          >
+                            <img
+                              class="p-1 mt-1 mx-auto"
+                              width="40"
+                              src="../../static/product/bukalapak.svg"
+                              alt=""
+                            />
+                          </div>
+                        </a>
                       </li>
                     </ul>
                   </div>
@@ -349,46 +355,52 @@
                         class="nav-item5 mx-1"
                         v-if="this.links.lazada != 'lazada'"
                       >
-                        <div
-                          class="shadow-sm border border-1 lazada-order btn-order"
-                        >
-                          <img
-                            class="p-1 mt-1 mx-auto block"
-                            width="40"
-                            src="../../static/product/lazada.svg"
-                            alt=""
-                          />
-                        </div>
+                        <a target="_blank" :href="this.links.lazada">
+                          <div
+                            class="shadow-sm border border-1 lazada-order btn-order"
+                          >
+                            <img
+                              class="p-1 mt-1 mx-auto block"
+                              width="40"
+                              src="../../static/product/lazada.svg"
+                              alt=""
+                            />
+                          </div>
+                        </a>
                       </li>
                       <li
                         class="nav-item5 mx-1"
                         v-if="this.links.blibli != 'blibli'"
                       >
-                        <div
-                          class="shadow-sm border border-1 blibli-order btn-order"
-                        >
-                          <img
-                            class="p-1 mt-1 mx-auto block"
-                            width="35"
-                            src="../../static/product/blibli.svg"
-                            alt=""
-                          />
-                        </div>
+                        <a target="_blank" :href="this.links.blibli">
+                          <div
+                            class="shadow-sm border border-1 blibli-order btn-order"
+                          >
+                            <img
+                              class="p-1 mt-1 mx-auto block"
+                              width="35"
+                              src="../../static/product/blibli.svg"
+                              alt=""
+                            />
+                          </div>
+                        </a>
                       </li>
                       <li
                         class="nav-item5 mx-1"
                         v-if="this.links.bukalapak != 'bukalapak'"
                       >
-                        <div
-                          class="shadow-sm border border-1 bukalapak-order btn-order text-center"
-                        >
-                          <img
-                            class="p-1 mt-1 mx-auto"
-                            width="40"
-                            src="../../static/product/bukalapak.svg"
-                            alt=""
-                          />
-                        </div>
+                        <a target="_blank" :href="this.links.bukalapak">
+                          <div
+                            class="shadow-sm border border-1 bukalapak-order btn-order text-center"
+                          >
+                            <img
+                              class="p-1 mt-1 mx-auto"
+                              width="40"
+                              src="../../static/product/bukalapak.svg"
+                              alt=""
+                            />
+                          </div>
+                        </a>
                       </li>
                     </ul>
                   </div>

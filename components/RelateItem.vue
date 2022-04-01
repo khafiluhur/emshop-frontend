@@ -50,7 +50,7 @@
         <div class="striped-border"></div>
       </div>
     </div>
-    <div class="mobile">
+    <div class="mobile mb-20">
       <div
         class="grid grid-cols-2 gap-4 mb-10 mx-2 mt-5"
         v-if="products.length > 0"

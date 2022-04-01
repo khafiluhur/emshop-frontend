@@ -72,7 +72,7 @@
         <div class="striped-border"></div>
       </div>
     </div>
-    <div class="mobile">
+    <div class="mobile mb-20">
       <div>
         <div class="flex flex-row py-3 mx-2" v-if="products.length > 0">
           <div class="mr-auto flex flex-row">

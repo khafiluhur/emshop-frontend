@@ -50,7 +50,7 @@
         <div class="striped-border"></div>
       </div>
     </div>
-    <div class="mobile mx-2">
+    <div class="mobile mx-2 mb-20">
       <div class="grid grid-cols-2 gap-4 mb-10" v-if="products.length > 0">
         <div
           class="card shadow-md"
