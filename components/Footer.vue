@@ -126,10 +126,10 @@
               <div class="col text-start">
                 <a
                   target="_blank"
-                  href="https://emshop.id/"
+                  href="https://aladinmall.misteraladin.com/"
                   aria-label="emshop"
                 >
-                  <img width="90" src="../static/mshop.png" alt="" />
+                  <img width="90" src="../static/logo-aladinmall.webp" alt="" />
                 </a>
               </div>
               <div class="col text-start">

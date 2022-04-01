@@ -205,27 +205,6 @@
         class="d-none d-md-none d-sm-block"
         style="height: 20px; background-color: #f6f6f6; margin-bottom: 40px"
       ></div>
-      <div class="mx-12 my-10">
-        <h1
-          class="text-start font-bold"
-          style="font-size: 18px; marign-bottom: 16px"
-        >
-          Deskripsi Produk
-        </h1>
-        <p
-          class="text-start mb-0"
-          style="font-size: 16px; white-space: pre-line"
-        >
-          {{ this.products.full_desc }}
-        </p>
-        <p class="text-start font-bold" style="font-size: 18px; color: #f37727">
-          Lihat lebih banyak
-        </p>
-      </div>
-      <div
-        class="d-none d-md-none d-sm-block"
-        style="height: 20px; background-color: #f6f6f6; margin-bottom: 40px"
-      ></div>
     </div>
     <RandomItem />
     <Footer />
