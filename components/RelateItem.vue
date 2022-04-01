@@ -1,47 +1,90 @@
 <template>
-  <div class="mx-12 2xl:mx-96 my-10">
-    <div class="grid grid-cols-5 gap-4 mb-10" v-if="products.length > 0">
-      <div
-        class="card shadow-md"
-        v-for="product in products"
-        :key="product.id"
-        :size="product.size"
-      >
-        <NuxtLink :to="'/product/' + product.slug">
-          <img
-            class="card-img-top"
-            :src="path_image + '/imgs/products/' + product.img"
-            alt="Card image cap"
-          />
-          <div class="card-body">
-            <h5 class="card-title font-bold">{{ product.name }}</h5>
-            <h5 class="card-text font-bold">Rp.{{ product.price }}</h5>
-            <div class="grid grid-cols-2">
-              <h5 class="card-text-promo line-through">
-                Rp.{{ product.disc_price }}
-              </h5>
-              <p class="card-text-dics font-semibold">-{{ product.disc }}%</p>
+  <div class="">
+    <div class="desktop mx-12 2xl:mx-96 my-10">
+      <div class="grid grid-cols-5 gap-4 mb-10" v-if="products.length > 0">
+        <div
+          class="card shadow-md"
+          v-for="product in products"
+          :key="product.id"
+          :size="product.size"
+        >
+          <NuxtLink :to="'/product/' + product.slug">
+            <img
+              class="card-img-top"
+              :src="path_image + '/imgs/products/' + product.img"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title font-bold">{{ product.name }}</h5>
+              <h5 class="card-text font-bold">Rp.{{ product.price }}</h5>
+              <div class="grid grid-cols-2">
+                <h5 class="card-text-promo line-through">
+                  Rp.{{ product.disc_price }}
+                </h5>
+                <p class="card-text-dics font-semibold">-{{ product.disc }}%</p>
+              </div>
             </div>
+          </NuxtLink>
+        </div>
+      </div>
+      <div class="" v-else>
+        <div class="flex">
+          <div class="flex-1 p-3">
+            <div class="product rounded-3xl"></div>
           </div>
-        </NuxtLink>
+          <div class="flex-1 p-3">
+            <div class="product rounded-3xl"></div>
+          </div>
+          <div class="flex-1 p-3">
+            <div class="product rounded-3xl"></div>
+          </div>
+          <div class="flex-1 p-3">
+            <div class="product rounded-3xl"></div>
+          </div>
+          <div class="flex-1 p-3">
+            <div class="product rounded-3xl"></div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="" v-else>
-      <div class="flex">
-        <div class="flex-1 p-3">
-          <div class="product rounded-3xl"></div>
+    <div class="mobile">
+      <div
+        class="grid grid-cols-2 gap-4 mb-10 mx-2 mt-5"
+        v-if="products.length > 0"
+      >
+        <div
+          class="card shadow-md"
+          v-for="product in products"
+          :key="product.id"
+          :size="product.size"
+        >
+          <NuxtLink :to="'/product/' + product.slug">
+            <img
+              class="card-img-top"
+              :src="path_image + '/imgs/products/' + product.img"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title font-bold">{{ product.name }}</h5>
+              <h5 class="card-text font-bold">Rp.{{ product.price }}</h5>
+              <div class="grid grid-cols-3">
+                <h5 class="card-text-promo line-through col-span-2">
+                  Rp.{{ product.disc_price }}
+                </h5>
+                <p class="card-text-dics font-semibold">-{{ product.disc }}%</p>
+              </div>
+            </div>
+          </NuxtLink>
         </div>
-        <div class="flex-1 p-3">
-          <div class="product rounded-3xl"></div>
-        </div>
-        <div class="flex-1 p-3">
-          <div class="product rounded-3xl"></div>
-        </div>
-        <div class="flex-1 p-3">
-          <div class="product rounded-3xl"></div>
-        </div>
-        <div class="flex-1 p-3">
-          <div class="product rounded-3xl"></div>
+      </div>
+      <div class="" v-else>
+        <div class="flex">
+          <div class="flex-1 p-3">
+            <div class="product rounded-3xl"></div>
+          </div>
+          <div class="flex-1 p-3">
+            <div class="product rounded-3xl"></div>
+          </div>
         </div>
       </div>
     </div>

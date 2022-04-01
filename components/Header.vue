@@ -48,6 +48,13 @@
         </NuxtLink>
       </div>
     </div>
+    <div class="mobile">
+      <div class="text-center py-5 bg-header-first">
+        <NuxtLink to="/">
+          <img width="152" src="../static/logo.png" alt="logo_emshop" />
+        </NuxtLink>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -84,5 +91,21 @@ export default {
 }
 .text-menu:hover {
   color: #f37727;
+}
+@media screen and (max-width: 425px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+}
+@media screen and (min-width: 426px) {
+  .desktop {
+    display: block;
+  }
+  .mobile {
+    display: none;
+  }
 }
 </style>

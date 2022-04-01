@@ -1,23 +1,44 @@
 <template>
-  <div id="banner" class="mx-12 2xl:mx-96 my-5">
-    <VueSlickCarousel v-bind="settings" v-if="Object.keys(banners).length">
-      <div v-for="banner in banners" :key="banner.id" :size="banner.size">
-        <img
-          class="rounded-3xl p-3"
-          :src="path_image + '/imgs/banners/' + banner.img"
-          :alt="banner.title"
-        />
+  <div id="banner" class="">
+    <div class="desktop mx-12 2xl:mx:96 my-5">
+      <VueSlickCarousel v-bind="settings" v-if="Object.keys(banners).length">
+        <div v-for="banner in banners" :key="banner.id" :size="banner.size">
+          <img
+            class="rounded-3xl p-3"
+            :src="path_image + '/imgs/banners/' + banner.img"
+            :alt="banner.title"
+          />
+        </div>
+      </VueSlickCarousel>
+      <div class="flex" v-else>
+        <div class="flex-1 p-3">
+          <div class="image rounded-3xl"></div>
+        </div>
+        <div class="flex-1 p-3">
+          <div class="image rounded-3xl"></div>
+        </div>
+        <div class="flex-1 p-3">
+          <div class="image rounded-3xl"></div>
+        </div>
       </div>
-    </VueSlickCarousel>
-    <div class="flex" v-else>
-      <div class="flex-1 p-3">
-        <div class="image rounded-3xl"></div>
-      </div>
-      <div class="flex-1 p-3">
-        <div class="image rounded-3xl"></div>
-      </div>
-      <div class="flex-1 p-3">
-        <div class="image rounded-3xl"></div>
+    </div>
+    <div class="mobile">
+      <VueSlickCarousel
+        v-bind="mobile_settings"
+        v-if="Object.keys(banners).length"
+      >
+        <div v-for="banner in banners" :key="banner.id" :size="banner.size">
+          <img
+            class=""
+            :src="path_image + '/imgs/banners/' + banner.img"
+            :alt="banner.title"
+          />
+        </div>
+      </VueSlickCarousel>
+      <div class="flex" v-else>
+        <div class="flex-1">
+          <div class="image"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -41,6 +62,14 @@ export default {
         arrows: true,
         dots: true,
         slidesToShow: 3,
+        autoplay: true,
+        speed: 1000,
+        autoplaySpeed: 4000,
+      },
+      mobile_settings: {
+        arrows: false,
+        dots: false,
+        slidesToShow: 1,
         autoplay: true,
         speed: 1000,
         autoplaySpeed: 4000,
@@ -70,7 +99,7 @@ export default {
 }
 #banner .slick-prev:before,
 #banner .slick-next:before {
-  color: black;
+  color: white;
   font-size: 32px;
 }
 #banner .slick-arrow {

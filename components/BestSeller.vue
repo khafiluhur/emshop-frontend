@@ -1,67 +1,134 @@
 <template>
-  <div class="mx-12 2xl:mx-96 my-5">
-    <div>
-      <div class="flex flex-row py-3" v-if="products.length > 0">
-        <div class="mr-auto flex flex-row">
-          <p class="text-title font-bold">Terlaris</p>
+  <div class="">
+    <div class="desktop mx-12 2xl:mx-96 my-5">
+      <div>
+        <div class="flex flex-row py-3" v-if="products.length > 0">
+          <div class="mr-auto flex flex-row">
+            <p class="text-title font-bold">Terlaris</p>
+          </div>
+          <div class="my-auto">
+            <nuxt-link to="/exclusive/bestSeller" class="mx-3 font-light">
+              Lihat Semua
+            </nuxt-link>
+          </div>
         </div>
-        <div class="my-auto">
-          <nuxt-link to="/exclusive/bestSeller" class="mx-3 font-light">
-            Lihat Semua
-          </nuxt-link>
+        <div class="flex flex-row py-3" v-else>
+          <div class="mr-auto flex flex-row">
+            <div class="title-section"></div>
+          </div>
+          <div class="my-auto">
+            <div class="title-section"></div>
+          </div>
         </div>
       </div>
-      <div class="flex flex-row py-3" v-else>
-        <div class="mr-auto flex flex-row">
-          <div class="title-section"></div>
-        </div>
-        <div class="my-auto">
-          <div class="title-section"></div>
+      <div class="mb-10" id="bestSeller">
+        <VueSlickCarousel v-bind="settings" v-if="Object.keys(products).length">
+          <div
+            class="card shadow-md"
+            v-for="product in products"
+            :key="product.id"
+            :size="product.size"
+          >
+            <NuxtLink :to="'/product/' + product.slug">
+              <img
+                class="card-img-top"
+                :src="path_image + '/imgs/products/' + product.img"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title font-bold">{{ product.name }}</h5>
+                <h5 class="card-text font-bold">Rp.{{ product.price }}</h5>
+                <div class="grid grid-cols-2">
+                  <h5 class="card-text-promo line-through">
+                    Rp.{{ product.disc_price }}
+                  </h5>
+                  <p class="card-text-dics font-semibold">
+                    -{{ product.disc }}%
+                  </p>
+                </div>
+              </div>
+            </NuxtLink>
+          </div>
+        </VueSlickCarousel>
+        <div class="flex" v-else>
+          <div class="flex-1 p-3">
+            <div class="product rounded-3xl"></div>
+          </div>
+          <div class="flex-1 p-3">
+            <div class="product rounded-3xl"></div>
+          </div>
+          <div class="flex-1 p-3">
+            <div class="product rounded-3xl"></div>
+          </div>
+          <div class="flex-1 p-3">
+            <div class="product rounded-3xl"></div>
+          </div>
+          <div class="flex-1 p-3">
+            <div class="product rounded-3xl"></div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="mb-10" id="bestSeller">
-      <VueSlickCarousel v-bind="settings" v-if="Object.keys(products).length">
-        <div
-          class="card shadow-md"
-          v-for="product in products"
-          :key="product.id"
-          :size="product.size"
+    <div class="mobile">
+      <div>
+        <div class="flex flex-row py-3 mx-2" v-if="products.length > 0">
+          <div class="mr-auto flex flex-row">
+            <p class="text-title font-bold">Terlaris</p>
+          </div>
+          <div class="my-auto">
+            <nuxt-link to="/exclusive/bestSeller" class="mx-3 font-light">
+              Lihat Semua
+            </nuxt-link>
+          </div>
+        </div>
+        <div class="flex flex-row py-3 mx-2" v-else>
+          <div class="mr-auto flex flex-row">
+            <div class="title-section"></div>
+          </div>
+          <div class="my-auto">
+            <div class="title-section"></div>
+          </div>
+        </div>
+      </div>
+      <div class="mb-10" id="bestSeller">
+        <VueSlickCarousel
+          v-bind="mobile_settings"
+          v-if="Object.keys(products).length"
         >
-          <NuxtLink :to="'/product/' + product.slug">
-            <img
-              class="card-img-top"
-              :src="path_image + '/imgs/products/' + product.img"
-              alt="Card image cap"
-            />
-            <div class="card-body">
-              <h5 class="card-title font-bold">{{ product.name }}</h5>
-              <h5 class="card-text font-bold">Rp.{{ product.price }}</h5>
-              <div class="grid grid-cols-2">
-                <h5 class="card-text-promo line-through">
-                  Rp.{{ product.disc_price }}
-                </h5>
-                <p class="card-text-dics font-semibold">-{{ product.disc }}%</p>
+          <div
+            class="card shadow-md"
+            v-for="product in products"
+            :key="product.id"
+            :size="product.size"
+          >
+            <NuxtLink :to="'/product/' + product.slug">
+              <img
+                class="card-img-top"
+                :src="path_image + '/imgs/products/' + product.img"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title font-bold">{{ product.name }}</h5>
+                <h5 class="card-text font-bold">Rp.{{ product.price }}</h5>
+                <div class="grid grid-cols-3">
+                  <h5 class="card-text-promo line-through col-span-2">
+                    Rp.{{ product.disc_price }}
+                  </h5>
+                  <p class="card-text-dics font-semibold">
+                    -{{ product.disc }}%
+                  </p>
+                </div>
               </div>
-            </div>
-          </NuxtLink>
-        </div>
-      </VueSlickCarousel>
-      <div class="flex" v-else>
-        <div class="flex-1 p-3">
-          <div class="product rounded-3xl"></div>
-        </div>
-        <div class="flex-1 p-3">
-          <div class="product rounded-3xl"></div>
-        </div>
-        <div class="flex-1 p-3">
-          <div class="product rounded-3xl"></div>
-        </div>
-        <div class="flex-1 p-3">
-          <div class="product rounded-3xl"></div>
-        </div>
-        <div class="flex-1 p-3">
-          <div class="product rounded-3xl"></div>
+            </NuxtLink>
+          </div>
+        </VueSlickCarousel>
+        <div class="flex" v-else>
+          <div class="flex-1 p-3">
+            <div class="product rounded-3xl"></div>
+          </div>
+          <div class="flex-1 p-3">
+            <div class="product rounded-3xl"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -86,6 +153,10 @@ export default {
       settings: {
         arrows: true,
         slidesToShow: 5,
+      },
+      mobile_settings: {
+        arrows: false,
+        slidesToShow: 2,
       },
       products: [],
       path_image: 'https://image.shobaro.com',
@@ -191,12 +262,9 @@ export default {
 #bestSeller .slick-dots li button:before {
   font-size: 8px;
 }
-#bestSeller .slick-prev:before {
-  color: black;
-  font-size: 32px;
-}
+#bestSeller .slick-prev:before,
 #bestSeller .slick-next:before {
-  color: black;
+  color: white;
   font-size: 32px;
 }
 .title-section {
