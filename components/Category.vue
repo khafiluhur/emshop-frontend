@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <div class="desktop mx-12 2xl:mx-96 my-5">
+    <div class="desktop mx-12 my-5">
       <div class="flex flex-row mb-10" v-if="categories.length > 0">
         <div
           class="basis-full"
