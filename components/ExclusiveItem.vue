@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <div class="desktop mx-12 2xl:mx-96 my-10">
+    <div class="desktop mx-12 my-10">
       <div class="mt-10 mb-10 text-center" v-if="this.products.length != 0">
         <p class="font-bold" v-if="this.slug == 'bestSeller'">Best Seller</p>
         <p class="font-bold" v-else-if="this.slug === 'newItem'">New Item</p>
@@ -83,8 +83,8 @@
             <div class="card-body">
               <h5 class="card-title font-bold">{{ product.name }}</h5>
               <h5 class="card-text font-bold">Rp.{{ product.price }}</h5>
-              <div class="grid grid-cols-2">
-                <h5 class="card-text-promo line-through">
+              <div class="grid grid-cols-3">
+                <h5 class="card-text-promo line-through col-span-2">
                   Rp.{{ product.disc_price }}
                 </h5>
                 <p class="card-text-dics font-semibold">-{{ product.disc }}%</p>

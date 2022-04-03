@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header />
-    <div class="2xl:mx-96">
+    <div class="">
       <div class="desktop">
         <div class="mx-12 mt-10 flex" v-if="this.products.length != 0">
           <nuxt-link to="/">

@@ -2,7 +2,7 @@
   <div>
     <Header />
     <div class="desktop">
-      <div class="my-4 2xl:mx-96" v-if="categories.length != 0">
+      <div class="my-4" v-if="categories.length != 0">
         <img
           style="width: 100%"
           :src="path_image + '/imgs/category/' + this.categories.img"

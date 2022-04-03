@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <div class="desktop mx-12 2xl:mx-96 my-10">
+    <div class="desktop mx-12 my-10">
       <div class="grid grid-cols-5 gap-4 mb-10" v-if="products.length > 0">
         <div
           class="card shadow-md"

@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <div class="desktop mx-12 2xl:mx-96 my-5">
+    <div class="desktop mx-12 my-5">
       <div>
         <div class="flex flex-row py-3" v-if="products.length > 0">
           <div class="mr-auto flex flex-row">
