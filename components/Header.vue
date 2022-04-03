@@ -1,7 +1,7 @@
 <template>
   <div class="shadow-md sticky top-0 z-10">
     <div class="desktop">
-      <div class="flex flex-row px-12 2xl:px-96 py-3 bg-header-first">
+      <div class="flex flex-row px-12 py-3 bg-header-first">
         <div class="mr-auto flex flex-row">
           <p class="text-download my-auto font-bold">Download app</p>
           <div class="vertical-line-border ml-4"></div>
@@ -42,7 +42,7 @@
           >
         </div>
       </div>
-      <div class="flex flex-row px-12 2xl:px-96 py-6 bg-header-second">
+      <div class="flex flex-row px-12 py-6 bg-header-second">
         <NuxtLink to="/">
           <img width="152" src="../static/logo.png" alt="logo_emshop" />
         </NuxtLink>

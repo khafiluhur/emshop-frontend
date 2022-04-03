@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-12 2xl:mx-96 my-5">
+  <div class="mx-12 my-5">
     <div class="desktop">
       <div class="mb-10">
         <p class="text-title-footer pb-2">

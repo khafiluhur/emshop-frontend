@@ -1,6 +1,6 @@
 <template>
   <div id="banner" class="">
-    <div class="desktop mx-12 2xl:mx:96 my-5">
+    <div class="desktop mx-12 my-5">
       <VueSlickCarousel v-bind="settings" v-if="Object.keys(banners).length">
         <div v-for="banner in banners" :key="banner.id" :size="banner.size">
           <img
