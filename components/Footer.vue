@@ -22,7 +22,7 @@
                 />
               </div>
               <div class="col text-center">
-                <img width="30" src="../static/payment/bca.png" alt="" />
+                <img width="" src="../static/payment/bca.png" alt="" />
               </div>
               <div class="col text-center">
                 <img width="40" src="../static/payment/mandiri.png" alt="" />
@@ -31,10 +31,10 @@
                 <img width="50" src="../static/payment/bni.png" alt="" />
               </div>
               <div class="col text-center">
-                <img width="35" src="../static/payment/bri.png" alt="" />
+                <img width="" src="../static/payment/bri.png" alt="" />
               </div>
               <div class="col text-center">
-                <img width="50" src="../static/payment/permata.png" alt="" />
+                <img width="" src="../static/payment/permata.png" alt="" />
               </div>
               <div class="col text-center">
                 <img
@@ -70,7 +70,7 @@
                 <img width="50" src="../static/payment/kredivo.svg" alt="" />
               </div>
               <div class="col text-center">
-                <img width="50" src="../static/payment/indodana.png" alt="" />
+                <img width="" src="../static/payment/indodana.png" alt="" />
               </div>
               <div class="col text-center">
                 <img width="50" src="../static/payment/alfamart.svg" alt="" />
@@ -100,10 +100,10 @@
                 <img width="40" src="../static/courier/jne.png" alt="" />
               </div>
               <div class="col text-center">
-                <img width="40" src="../static/courier/sicepat.png" alt="" />
+                <img width="" src="../static/courier/sicepat.png" alt="" />
               </div>
               <div class="col text-center">
-                <img width="40" src="../static/courier/rpx.png" alt="" />
+                <img width="50" src="../static/courier/rpx.png" alt="" />
               </div>
               <div class="col text-center">
                 <img width="40" src="" alt="" />

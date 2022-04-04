@@ -223,43 +223,30 @@
           <div class="grid grid-cols-1">
             <div class="" v-if="this.products.length != 0">
               <img
-                class="border border-1 w-full"
+                class="w-full"
                 :src="path_image + '/imgs/products/' + this.products.img"
-                :alt="this.products.sku"
+                :alt="this.products.img"
               />
             </div>
             <div class="" v-else>
               <div class="image-product-mobile"></div>
             </div>
             <div class="mx-2 mt-5">
-              <h3
-                class="title-product font-bold mb-2"
-                v-if="this.products.length != 0"
-              >
-                {{ this.products.name }}
-              </h3>
-              <div class="mb-2 title-product-loading" v-else></div>
-              <h3
-                class="text-code-item text-start pb-3 mb-2"
-                v-if="this.products.length != 0"
-              >
-                Kode item: {{ this.products.sku }}
-              </h3>
-              <div class="pb-3 mb-2 title-code-product-loading" v-else></div>
+              <div class="flex" v-if="this.products.length != 0">
+                <p class="text-price-mobile pe-2">
+                  <s>Rp{{ this.products.disc_price }}</s>
+                </p>
+                <p class="text-disc-mobile font-bold ml-3">
+                  -{{ this.products.disc }}%
+                </p>
+              </div>
+              <div v-else>
+                <div class="product-disc-price"></div>
+              </div>
               <div class="grid grid-cols-4 gap-4">
-                <div class="disc-col" v-if="this.products.length != 0">
-                  <div class="dicount font-bold">
-                    <p class="py-2 px-2">-{{ this.products.disc }}%</p>
-                  </div>
-                </div>
-                <div class="disc-col" v-else>
-                  <div class="disc-loading rounded">
-                    <p class="py-2 px-2"></p>
-                  </div>
-                </div>
-                <div class="text-start mb-5 col-span-3">
+                <div class="text-start mb-3 col-span-3">
                   <h4
-                    class="text-price font-bold mb-0 text-special-price"
+                    class="text-price font-bold mb-0 text-special-price-mobile"
                     v-if="this.products.length != 0"
                   >
                     Rp{{ this.products.price }}
@@ -267,21 +254,27 @@
                   <div class="mb-1" v-else>
                     <div class="product-price-loading"></div>
                   </div>
-                  <div v-if="this.products.length != 0">
-                    <p class="text-price pe-2">
-                      Hemat: <s>Rp{{ this.products.disc_price }}</s>
-                    </p>
-                  </div>
-                  <div v-else>
-                    <div class="product-disc-price"></div>
-                  </div>
                 </div>
               </div>
+              <h3
+                class="text-code-item text-start mb-2"
+                v-if="this.products.length != 0"
+              >
+                Kode item: {{ this.products.sku }}
+              </h3>
+              <div class="pb-3 mb-2 title-code-product-loading" v-else></div>
+              <h3
+                class="title-product-mobile font-bold mb-2"
+                v-if="this.products.length != 0"
+              >
+                {{ this.products.name }}
+              </h3>
+              <div class="mb-2 title-product-loading" v-else></div>
               <div class="">
                 <hr />
               </div>
               <p
-                class="text-start title-product-desc"
+                class="text-start title-product-desc-mobile"
                 v-if="this.products.length != 0"
               >
                 {{ this.products.short_desc }}
@@ -296,7 +289,9 @@
                 class="navbar navbar-expand-lg navbar-light bg-social d-none d-sm-none d-lg-block"
                 v-if="this.products.length != 0"
               >
-                <div class="font-bold mb-2">Pesan disini :</div>
+                <div class="font-bold mb-2 text-order-mobile">
+                  Pesan disini :
+                </div>
                 <div class="container-fluid ps-0">
                   <div class="collapse navbar-collapse">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -468,6 +463,9 @@ export default {
 .title-product {
   font-size: 20px;
 }
+.title-product-mobile {
+  font-size: 14px;
+}
 .card-text-disc {
   font-size: 14px;
   font-weight: bold;
@@ -638,6 +636,9 @@ export default {
   color: #ff0000;
   font-size: 18px;
 }
+.text-special-price-mobile {
+  font-size: 24px;
+}
 .text-special-disc-price {
   text-decoration: line-through;
 }
@@ -661,6 +662,10 @@ export default {
 }
 .title-product-desc {
   font-size: 16px;
+  white-space: pre-line;
+}
+.title-product-desc-mobile {
+  font-size: 14px;
   white-space: pre-line;
 }
 .product-desc-loading {
@@ -689,5 +694,15 @@ export default {
   background-size: 200% 100%;
   -webkit-animation: 1.5s shine linear infinite;
   animation: 1.5s shine linear infinite;
+}
+.text-price-mobile {
+  font-size: 14px;
+}
+.text-disc-mobile {
+  font-size: 14px;
+  color: #ff0000;
+}
+.text-order-mobile {
+  font-size: 14px;
 }
 </style>

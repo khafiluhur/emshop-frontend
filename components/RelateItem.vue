@@ -68,14 +68,16 @@
               alt="Card image cap"
             />
             <div class="card-body">
-              <h5 class="card-title font-bold">{{ product.name }}</h5>
-              <h5 class="card-text font-bold">Rp.{{ product.price }}</h5>
-              <div class="grid grid-cols-3">
-                <h5 class="card-text-promo line-through col-span-2">
+              <h5 class="card-title-mobile font-bold">{{ product.name }}</h5>
+              <div class="grid grid-cols-3 mb-2">
+                <h5 class="card-text-promo-mobile line-through col-span-2">
                   Rp.{{ product.disc_price }}
                 </h5>
-                <p class="card-text-dics font-semibold">-{{ product.disc }}%</p>
+                <p class="card-text-dics-mobile font-semibold">
+                  -{{ product.disc }}%
+                </p>
               </div>
+              <h5 class="card-text-mobile font-bold">Rp.{{ product.price }}</h5>
             </div>
           </NuxtLink>
         </div>
@@ -124,7 +126,7 @@ export default {
 
 <style>
 .text-title {
-  font-size: 26px;
+  font-size: 16px;
 }
 .card {
   position: relative;
@@ -147,9 +149,21 @@ export default {
   text-align: start;
   margin-bottom: 8px;
 }
+.card-text-mobile {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: start;
+  margin-bottom: 8px;
+  color: black;
+}
 .card-text-promo {
   font-size: 14px;
   text-align: start;
+}
+.card-text-promo-mobile {
+  font-size: 12px;
+  text-align: start;
+  color: #999;
 }
 .card-text-disc {
   font-size: 14px;
@@ -180,5 +194,16 @@ export default {
   text-overflow: ellipsis;
   line-height: 25px;
   height: 46px;
+  color: black;
+}
+.card-title-mobile {
+  margin-bottom: 0.75rem;
+  font-size: 12px;
+  text-align: start;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 25px;
+  height: 46px;
+  color: black;
 }
 </style>

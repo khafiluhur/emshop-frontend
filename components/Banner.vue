@@ -68,7 +68,7 @@ export default {
       },
       mobile_settings: {
         arrows: false,
-        dots: false,
+        dots: true,
         slidesToShow: 1,
         autoplay: true,
         speed: 1000,
@@ -96,6 +96,14 @@ export default {
 #banner .slick-dots {
   text-align: left;
   position: initial;
+}
+#banner .mobile .slick-dots {
+  text-align: center;
+  position: relative;
+  bottom: 35px;
+}
+#banner .mobile .slick-dots li {
+  width: 4px;
 }
 #banner .slick-prev:before,
 #banner .slick-next:before {

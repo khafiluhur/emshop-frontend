@@ -15,8 +15,8 @@
     <div class="mobile">
       <div class="mx-12 2xl:mx-96 my-20 text-center">
         <img class="my-2" src="../static/coming_soon.svg" />
-        <p class="font-bold">Coming Soon</p>
-        <p class="my-2">
+        <p class="font-bold title-coming">Coming Soon</p>
+        <p class="my-2 title-text-coming">
           Jadi Mitra Saat ini belum tersedia silahkan kembali nanti.
         </p>
       </div>

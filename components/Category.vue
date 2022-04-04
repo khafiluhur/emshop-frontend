@@ -51,17 +51,14 @@
       <div class="line-border"></div>
     </div>
     <div class="mobile">
-      <div
-        class="grid grid-cols-4 gap-4 mb-10 mt-5"
-        v-if="categories.length > 0"
-      >
+      <div class="grid grid-cols-4 gap-4 mb-10" v-if="categories.length > 0">
         <div
           class="basis-full"
           v-for="category in categories"
           :key="category.id"
         >
           <NuxtLink :to="'/category/' + category.slug">
-            <div class="icon-category text-center">
+            <div class="icon-category text-center w-11 mx-auto">
               <img
                 class="mx-auto"
                 width="56"
@@ -69,7 +66,10 @@
                 :alt="category.icon"
               />
             </div>
-            <p class="text-category fw-bold text-center" style="color: black">
+            <p
+              class="text-category-mobile fw-bold text-center"
+              style="color: black"
+            >
               {{ category.name }}
             </p>
           </NuxtLink>
@@ -131,6 +131,9 @@ export default {
 }
 .text-category {
   font-size: 14px;
+}
+.text-category-mobile {
+  font-size: 12px;
 }
 .icon-category {
   margin-bottom: 24px;

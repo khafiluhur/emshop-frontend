@@ -112,16 +112,18 @@
                 alt="Card image cap"
               />
               <div class="card-body">
-                <h5 class="card-title font-bold">{{ product.name }}</h5>
-                <h5 class="card-text font-bold">Rp.{{ product.price }}</h5>
-                <div class="grid grid-cols-3">
-                  <h5 class="card-text-promo line-through col-span-2">
+                <h5 class="card-title-mobile font-bold">{{ product.name }}</h5>
+                <div class="grid grid-cols-3 mb-2">
+                  <h5 class="card-text-promo-mobile line-through col-span-2">
                     Rp.{{ product.disc_price }}
                   </h5>
-                  <p class="card-text-dics font-semibold">
+                  <p class="card-text-dics-mobile font-semibold">
                     -{{ product.disc }}%
                   </p>
                 </div>
+                <h5 class="card-text-mobile font-bold">
+                  Rp.{{ product.price }}
+                </h5>
               </div>
             </NuxtLink>
           </div>
@@ -248,6 +250,11 @@ export default {
   font-weight: 700;
   color: #ff0000;
 }
+.card-text-dics-mobile {
+  font-size: 12px;
+  font-weight: 700;
+  color: #ff0000;
+}
 #bestSeller .slick-arrow {
   border-radius: 20px;
   z-index: 1;
@@ -289,6 +296,7 @@ export default {
   animation: 1.5s shine linear infinite;
 }
 .mobile-more-all {
+  font-size: 12px;
   color: #f37727;
 }
 </style>
