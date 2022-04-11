@@ -12,7 +12,7 @@
               <img
                 class="mx-auto"
                 width="56"
-                :src="path_image + '/imgs/category/' + category.icon"
+                :src="path_image + '/assets/imgs/category/' + category.icon"
                 :alt="category.icon"
               />
             </div>
@@ -62,7 +62,7 @@
               <img
                 class="mx-auto"
                 width="56"
-                :src="path_image + '/imgs/category/' + category.icon"
+                :src="path_image + '/assets/imgs/category/' + category.icon"
                 :alt="category.icon"
               />
             </div>

@@ -224,7 +224,7 @@
             <div class="" v-if="this.products.length != 0">
               <img
                 class="w-full"
-                :src="path_image + '/imgs/products/' + this.products.img"
+                :src="path_image + '/assets/imgs/products/' + this.products.img"
                 :alt="this.products.img"
               />
             </div>
