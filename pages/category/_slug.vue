@@ -56,7 +56,7 @@ export default {
       categories: [],
       title: '',
       slug: this.$route.params.slug,
-      path_image: 'https://image.shobaro.com',
+      path_image: 'https://api.shobaro.com',
       path: 'https://api.shobaro.com',
     }
   },

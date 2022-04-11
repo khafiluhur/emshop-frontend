@@ -45,6 +45,7 @@
 </template>
 
 <script>
+import firebase from 'firebase'
 import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
@@ -75,7 +76,7 @@ export default {
         autoplaySpeed: 4000,
       },
       banners: [],
-      path_image: 'https://image.shobaro.com',
+      path_image: 'https://api.shobaro.com',
       path: 'https://api.shobaro.com',
     }
   },
