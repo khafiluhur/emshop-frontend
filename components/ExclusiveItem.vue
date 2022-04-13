@@ -67,9 +67,12 @@
     </div>
     <div class="mobile mx-2 mb-20">
       <div class="mt-10 mb-10 text-center" v-if="this.products.length != 0">
-        <p class="font-bold" v-if="this.slug == 'bestSeller'">Best Seller</p>
-        <p class="font-bold" v-else-if="this.slug === 'newItem'">New Item</p>
-        <p class="font-bold" v-else>Pilihan Lain Untukmu</p>
+        <p class="font-bold" v-if="this.slug == 'bestSeller'">Terlaris</p>
+        <p class="font-bold" v-else-if="this.slug === 'newItem'">Terbaru</p>
+        <p class="font-bold" v-else-if="this.slug === 'randomItem'">
+          Pilihan Lain Untukmu
+        </p>
+        <p class="font-bold" v-else>Semua Produk</p>
       </div>
       <div class="mt-10 mb-10" v-else>
         <div class="title-exclusive mx-auto"></div>
