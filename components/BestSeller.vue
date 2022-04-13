@@ -74,12 +74,12 @@
       <div>
         <div class="flex flex-row py-3 mx-2" v-if="products.length > 0">
           <div class="mr-auto flex flex-row">
-            <p class="text-title font-bold">Terlaris</p>
+            <p class="text-title-mobile font-bold">Terlaris</p>
           </div>
           <div class="my-auto">
             <nuxt-link
               to="/exclusive/bestSeller"
-              class="mx-3 font-light mobile-more-all"
+              class="font-bold mx-3 font-light mobile-more-all"
             >
               Lihat Semua
             </nuxt-link>

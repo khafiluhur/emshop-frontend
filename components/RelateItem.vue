@@ -118,39 +118,64 @@
       </div>
     </div>
     <div class="mobile mb-20">
-      <div
-        class="grid grid-cols-2 gap-4 mb-10 mx-2 mt-5"
-        v-if="products.length > 0"
-      >
-        <div
-          class="card shadow-md"
-          v-for="product in products"
-          :key="product.id"
-          :size="product.size"
-        >
-          <NuxtLink :to="'/product/' + product.slug">
-            <img
-              class="card-img-top"
-              :src="path_image + '/assets/imgs/products/' + product.img"
-              alt="Card image cap"
-            />
-            <div class="card-body">
-              <h5 class="card-title-mobile font-bold">{{ product.name }}</h5>
-              <div class="grid grid-cols-3 mb-2">
-                <h5 class="card-text-promo-mobile line-through col-span-2">
-                  Rp.{{ product.disc_price }}
-                </h5>
-                <p class="card-text-dics-mobile font-semibold">
-                  -{{ product.disc }}%
-                </p>
-              </div>
-              <h5 class="card-text-mobile font-bold">Rp.{{ product.price }}</h5>
-            </div>
-          </NuxtLink>
+      <div>
+        <div class="flex flex-row py-3 mx-2" v-if="products.length > 0">
+          <div class="mr-auto flex flex-row">
+            <p class="text-title-mobile font-bold">Semua Produk</p>
+          </div>
+          <div class="my-auto">
+            <nuxt-link
+              to="/exclusive/product"
+              class="font-bold mx-3 font-light mobile-more-all"
+            >
+              Lihat Semua
+            </nuxt-link>
+          </div>
+        </div>
+        <div class="flex flex-row py-3 mx-2" v-else>
+          <div class="mr-auto flex flex-row">
+            <div class="title-section"></div>
+          </div>
+          <div class="my-auto">
+            <div class="title-section"></div>
+          </div>
         </div>
       </div>
-      <div class="" v-else>
-        <div class="flex">
+      <div class="mb-10" id="bestSeller">
+        <VueSlickCarousel
+          v-bind="mobile_settings"
+          v-if="Object.keys(products).length"
+        >
+          <div
+            class="card shadow-md"
+            v-for="product in products"
+            :key="product.id"
+            :size="product.size"
+          >
+            <NuxtLink :to="'/product/' + product.slug">
+              <img
+                class="card-img-top"
+                :src="path_image + '/assets/imgs/products/' + product.img"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title-mobile font-bold">{{ product.name }}</h5>
+                <div class="grid grid-cols-3 mb-2">
+                  <h5 class="card-text-promo-mobile line-through col-span-2">
+                    Rp.{{ product.disc_price }}
+                  </h5>
+                  <p class="card-text-dics-mobile font-semibold">
+                    -{{ product.disc }}%
+                  </p>
+                </div>
+                <h5 class="card-text-mobile font-bold">
+                  Rp.{{ product.price }}
+                </h5>
+              </div>
+            </NuxtLink>
+          </div>
+        </VueSlickCarousel>
+        <div class="flex" v-else>
           <div class="flex-1 p-3">
             <div class="product rounded-3xl"></div>
           </div>
@@ -181,6 +206,10 @@ export default {
       settings: {
         arrows: true,
         slidesToShow: 5,
+      },
+      mobile_settings: {
+        arrows: false,
+        slidesToShow: 2,
       },
       products: [],
       path_image: 'https://api.shobaro.com',

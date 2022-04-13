@@ -76,12 +76,12 @@
       <div>
         <div class="flex flex-row py-3 mx-2" v-if="products.length > 0">
           <div class="mr-auto flex flex-row">
-            <p class="text-title font-bold">Pilihan Lain Untukmu</p>
+            <p class="text-title-mobile font-bold">Pilihan Lain Untukmu</p>
           </div>
           <div class="my-auto">
             <nuxt-link
               to="/exclusive/randomItem"
-              class="mx-3 font-light mobile-more-all"
+              class="mx-3 font-bold mobile-more-all"
             >
               Lihat Semua
             </nuxt-link>
@@ -254,5 +254,8 @@ export default {
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
     var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.text-title-mobile {
+  font-size: 16px;
 }
 </style>
