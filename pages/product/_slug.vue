@@ -82,12 +82,28 @@
               <div class="">
                 <hr />
               </div>
-              <p
-                class="text-start title-product-desc"
-                v-if="this.products.length != 0"
-              >
-                {{ this.products.short_desc }}
-              </p>
+              <span v-if="this.products.length != 0">
+                <p
+                  class="text-start title-product-desc"
+                  :class="{ container_desc: isActive }"
+                >
+                  {{ this.products.short_desc }}
+                </p>
+                <p
+                  class="btnSee"
+                  :class="{ hidden: isActive }"
+                  @click="isActive = !isActive"
+                >
+                  Lihat Lebih Sedikit
+                </p>
+                <p
+                  class="btnSee"
+                  :class="{ hidden: !isActive }"
+                  @click="isActive = !isActive"
+                >
+                  Lihat Selengkapnya
+                </p>
+              </span>
               <div v-else>
                 <div class="product-desc-loading mt-5"></div>
               </div>
@@ -476,6 +492,7 @@ export default {
   },
   data() {
     return {
+      isActive: true,
       products: [],
       links: [],
       title: '',
@@ -700,7 +717,9 @@ export default {
 }
 .title-product-desc {
   font-size: 16px;
+  line-height: 20px;
   white-space: pre-line;
+  word-break: break-word;
 }
 .title-product-desc-mobile {
   font-size: 14px;
@@ -742,5 +761,15 @@ export default {
 }
 .text-order-mobile {
   font-size: 14px;
+}
+.btnSee {
+  margin: 10px 0;
+  color: #f37727;
+  font-weight: bold;
+  cursor: pointer;
+}
+.container_desc {
+  max-height: 163px;
+  overflow: hidden;
 }
 </style>
