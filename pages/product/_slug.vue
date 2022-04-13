@@ -96,7 +96,9 @@
                 >
                   Lihat Lebih Sedikit
                 </p>
+                <p v-if="this.desc_length <= 341"></p>
                 <p
+                  v-else
                   class="btnSee"
                   :class="{ hidden: !isActive }"
                   @click="isActive = !isActive"
@@ -493,6 +495,7 @@ export default {
   data() {
     return {
       isActive: true,
+      desc_length: '',
       products: [],
       links: [],
       title: '',
@@ -509,6 +512,8 @@ export default {
       this.products = res.data.data
       this.links = res.data.data.link
       this.title = res.data.data.name
+      this.desc_length = res.data.data.short_desc.length
+      console.log(this.desc_length)
     } catch (error) {}
   },
 }
