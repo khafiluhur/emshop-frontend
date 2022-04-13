@@ -513,7 +513,6 @@ export default {
       this.links = res.data.data.link
       this.title = res.data.data.name
       this.desc_length = res.data.data.short_desc.length
-      console.log(this.desc_length)
     } catch (error) {}
   },
 }

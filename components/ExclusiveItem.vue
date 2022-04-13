@@ -146,7 +146,6 @@ export default {
       })
       if (this.slug == 'product' && 'randomItem') {
         this.products = res_product.data.data
-        console.log(this.products)
       } else {
         this.products = res.data.data.data
       }
