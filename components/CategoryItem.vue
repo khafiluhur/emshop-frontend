@@ -116,9 +116,7 @@ export default {
         { headers: headers }
       )
       this.products = res.data.data.data
-    } catch (error) {
-      console.log(error)
-    }
+    } catch (error) {}
   },
 }
 </script>

@@ -31,14 +31,14 @@
           </div>
         </div>
         <div class="my-auto">
+          <NuxtLink to="/streaming" class="mx-3 font-light text-menu"
+            >Streaming</NuxtLink
+          >
           <NuxtLink to="/jadi-mitra" class="mx-3 font-light text-menu"
             >Jadi Mitra</NuxtLink
           >
           <NuxtLink to="/customer-care" class="mx-3 font-light text-menu"
             >Customer Care</NuxtLink
-          >
-          <NuxtLink to="/streaming" class="font-light text-menu"
-            >Streaming</NuxtLink
           >
         </div>
       </div>

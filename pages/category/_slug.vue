@@ -2,13 +2,24 @@
   <div>
     <Header />
     <div class="desktop">
-      <div class="my-4" v-if="categories.length != 0">
+      <div class="mx-12 mt-10 flex" v-if="this.categories.length != 0">
+        <nuxt-link to="/">
+          <p style="color: #999999">Home</p>
+        </nuxt-link>
+        <p class="mx-4" style="color: #999999">></p>
+        <nuxt-link :to="'/category/' + this.categories.slug">
+          <p class="font-bold" style="color: #999999">
+            {{ this.categories.name }}
+          </p>
+        </nuxt-link>
+      </div>
+      <!-- <div class="my-4 img-category" v-if="categories.length != 0">
         <img
           style="width: 100%"
           :src="path_image + '/assets/imgs/category/' + this.categories.img"
           alt=""
         />
-      </div>
+      </div> -->
       <div v-else>
         <div class="banner-category"></div>
       </div>
@@ -17,7 +28,7 @@
       <div class="mb-5" v-if="categories.length != 0">
         <img
           style="width: 100%"
-          :src="path_image + '/imgs/category/' + this.categories.img"
+          :src="path_image + '/assets/imgs/category/' + this.categories.img"
           alt=""
         />
       </div>
@@ -68,9 +79,7 @@ export default {
       )
       this.categories = res.data.data
       this.title = res.data.data.name
-    } catch (error) {
-      console.log(error)
-    }
+    } catch (error) {}
   },
 }
 </script>
@@ -83,5 +92,10 @@ export default {
   background-size: 200% 100%;
   -webkit-animation: 1.5s shine linear infinite;
   animation: 1.5s shine linear infinite;
+}
+.img-category {
+  width: 100%;
+  height: 560px;
+  background-size: 100% 100%;
 }
 </style>

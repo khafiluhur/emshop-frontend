@@ -84,10 +84,7 @@ export default {
   },
   async created() {
     try {
-      console.log(this.url)
-    } catch (error) {
-      console.log(error)
-    }
+    } catch (error) {}
   },
 }
 </script>

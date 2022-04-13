@@ -114,9 +114,7 @@ export default {
         headers: headers,
       })
       this.categories = res.data.data
-    } catch (error) {
-      console.log(error)
-    }
+    } catch (error) {}
   },
 }
 </script>

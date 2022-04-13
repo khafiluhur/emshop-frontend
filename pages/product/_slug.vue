@@ -104,7 +104,10 @@
                   </a>
                   <div class="collapse navbar-collapse">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-3">
-                      <li class="nav-item" v-if="this.links.aladin != 'aladin'">
+                      <li
+                        class="nav-item mx-3"
+                        v-if="this.links.aladin != 'aladin'"
+                      >
                         <a target="_blank" :href="this.links.aladin">
                           <div
                             class="shadow-sm border border-1 aladin-order btn-order"
@@ -136,7 +139,7 @@
                         </a>
                       </li>
                       <li
-                        class="nav-item5"
+                        class="nav-item5 mx-3"
                         v-if="this.links.shopee != 'shopee'"
                       >
                         <a target="_blank" :href="this.links.shopee">
@@ -170,7 +173,7 @@
                         </a>
                       </li>
                       <li
-                        class="nav-item5"
+                        class="nav-item5 mx-3"
                         v-if="this.links.blibli != 'blibli'"
                       >
                         <a target="_blank" :href="this.links.blibli">
@@ -203,6 +206,43 @@
                           </div>
                         </a>
                       </li>
+                      <!-- <li class="nav-item5 mx-3">
+                        <a
+                          target="_blank"
+                          :href="
+                            'https://wa.me/6281585312144?text=Saya%20tertarik%20dengan%20produk%20ini%3A' +
+                            '%0A' +
+                            'nama produk%3A' +
+                            '%20' +
+                            this.products.name +
+                            '%0A' +
+                            'sku produk%3A' +
+                            '%20' +
+                            this.products.sku +
+                            '%0A' +
+                            'harga produk%3A' +
+                            '%20' +
+                            'Rp.' +
+                            this.products.price +
+                            '%0A' +
+                            'link produk%3A' +
+                            '%20' +
+                            'https://beta.emshop.id' +
+                            this.$route.fullPath
+                          "
+                        >
+                          <div
+                            class="shadow-sm border border-1 bukalapak-order btn-order text-center"
+                          >
+                            <img
+                              class="p-1 mx-auto"
+                              width="50"
+                              src="../../static/product/whatsapp.svg"
+                              alt=""
+                            />
+                          </div>
+                        </a>
+                      </li> -->
                     </ul>
                   </div>
                 </div>
@@ -452,9 +492,7 @@ export default {
       this.products = res.data.data
       this.links = res.data.data.link
       this.title = res.data.data.name
-    } catch (error) {
-      console.log(error)
-    }
+    } catch (error) {}
   },
 }
 </script>

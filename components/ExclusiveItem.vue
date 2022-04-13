@@ -2,9 +2,16 @@
   <div class="">
     <div class="desktop mx-12 my-10">
       <div class="mt-10 mb-10 text-center" v-if="this.products.length != 0">
-        <p class="font-bold" v-if="this.slug == 'bestSeller'">Best Seller</p>
-        <p class="font-bold" v-else-if="this.slug === 'newItem'">New Item</p>
-        <p class="font-bold" v-else>Pilihan Lain Untukmu</p>
+        <p class="font-bold text-title" v-if="this.slug == 'bestSeller'">
+          Terlaris
+        </p>
+        <p class="font-bold text-title" v-else-if="this.slug === 'newItem'">
+          Terbaru
+        </p>
+        <p class="font-bold text-title" v-else-if="this.slug === 'randomItem'">
+          Pilihan Lain Untukmu
+        </p>
+        <p class="font-bold text-title" v-else>Semua Produk</p>
       </div>
       <div class="mt-10 mb-10" v-else>
         <div class="title-exclusive mx-auto"></div>
@@ -131,10 +138,16 @@ export default {
         this.path + '/api/product/exclusive/' + this.slug,
         { headers: headers }
       )
-      this.products = res.data.data.data
-    } catch (error) {
-      console.log(error)
-    }
+      const res_product = await axios.get(this.path + '/api/product', {
+        headers: headers,
+      })
+      if (this.slug == 'product' && 'randomItem') {
+        this.products = res_product.data.data
+        console.log(this.products)
+      } else {
+        this.products = res.data.data.data
+      }
+    } catch (error) {}
   },
 }
 </script>

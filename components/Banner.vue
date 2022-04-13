@@ -85,9 +85,7 @@ export default {
         headers: headers,
       })
       this.banners = res.data.data
-    } catch (error) {
-      console.log(error)
-    }
+    } catch (error) {}
   },
 }
 </script>

@@ -1,7 +1,74 @@
 <template>
   <div class="">
     <div class="desktop mx-12 my-10">
-      <div class="grid grid-cols-5 gap-4 mb-10" v-if="products.length > 0">
+      <div>
+        <div class="flex flex-row py-3" v-if="products.length > 0">
+          <div class="mr-auto flex flex-row">
+            <p class="text-title font-bold">Semua Produk</p>
+          </div>
+          <div class="my-auto">
+            <nuxt-link to="/exclusive/product" class="mx-3 font-light">
+              Lihat Semua
+            </nuxt-link>
+          </div>
+        </div>
+        <div class="flex flex-row py-3" v-else>
+          <div class="mr-auto flex flex-row">
+            <div class="title-section"></div>
+          </div>
+          <div class="my-auto">
+            <div class="title-section"></div>
+          </div>
+        </div>
+      </div>
+      <div class="mb-10" id="allproduct">
+        <VueSlickCarousel v-bind="settings" v-if="Object.keys(products).length">
+          <div
+            class="card shadow-md"
+            v-for="product in products"
+            :key="product.id"
+            :size="product.size"
+          >
+            <NuxtLink :to="'/product/' + product.slug">
+              <img
+                class="card-img-top"
+                :src="path_image + '/assets/imgs/products/' + product.img"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title font-bold">{{ product.name }}</h5>
+                <h5 class="card-text font-bold">Rp.{{ product.price }}</h5>
+                <div class="grid grid-cols-2">
+                  <h5 class="card-text-promo line-through">
+                    Rp.{{ product.disc_price }}
+                  </h5>
+                  <p class="card-text-dics font-semibold">
+                    -{{ product.disc }}%
+                  </p>
+                </div>
+              </div>
+            </NuxtLink>
+          </div>
+        </VueSlickCarousel>
+        <div class="flex" v-else>
+          <div class="flex-1 p-3">
+            <div class="product rounded-3xl"></div>
+          </div>
+          <div class="flex-1 p-3">
+            <div class="product rounded-3xl"></div>
+          </div>
+          <div class="flex-1 p-3">
+            <div class="product rounded-3xl"></div>
+          </div>
+          <div class="flex-1 p-3">
+            <div class="product rounded-3xl"></div>
+          </div>
+          <div class="flex-1 p-3">
+            <div class="product rounded-3xl"></div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="grid grid-cols-5 gap-4 mb-10" v-if="products.length > 0">
         <div
           class="card shadow-md"
           v-for="product in products"
@@ -45,7 +112,7 @@
             <div class="product rounded-3xl"></div>
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="mb-5">
         <div class="striped-border"></div>
       </div>
@@ -97,6 +164,10 @@
 </template>
 
 <script>
+import VueSlickCarousel from 'vue-slick-carousel'
+import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+
 const axios = require('axios').default
 const headers = {
   Authorization: 'Bearer 1|3mTRZGnfTJ4wB0iX7LbAQbEKo6ZtQIbB56zxbNpA',
@@ -104,8 +175,13 @@ const headers = {
 
 export default {
   name: 'BestSeller',
+  components: { VueSlickCarousel },
   data() {
     return {
+      settings: {
+        arrows: true,
+        slidesToShow: 5,
+      },
       products: [],
       path_image: 'https://api.shobaro.com',
       path: 'https://api.shobaro.com',
@@ -117,16 +193,14 @@ export default {
         headers: headers,
       })
       this.products = res.data.data
-    } catch (error) {
-      console.log(error)
-    }
+    } catch (error) {}
   },
 }
 </script>
 
 <style>
 .text-title {
-  font-size: 16px;
+  font-size: 26px;
 }
 .card {
   position: relative;
@@ -205,5 +279,32 @@ export default {
   line-height: 25px;
   height: 46px;
   color: black;
+}
+#allproduct > .slick-slider > .slick-list > .slick-track > .slick-slide {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+#allproduct .slick-arrow {
+  border-radius: 20px;
+  z-index: 1;
+}
+#allproduct .slick-prev {
+  left: -6px;
+}
+#allproduct .slick-next {
+  right: -6px;
+}
+#allproduct .slick-prev,
+#allproduct .slick-next {
+  width: 42px;
+  height: 42px;
+}
+#allproduct .slick-dots li button:before {
+  font-size: 8px;
+}
+#allproduct .slick-prev:before,
+#allproduct .slick-next:before {
+  color: black;
+  font-size: 32px;
 }
 </style>
