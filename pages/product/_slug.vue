@@ -536,7 +536,7 @@
         </div>
       </div>
     </div>
-    <div class="line-border-mobile"></div>
+    <div class="line-border-mobile mobile"></div>
     <RandomItem />
     <Footer />
     <NavigationBar />
