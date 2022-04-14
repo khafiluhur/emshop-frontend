@@ -468,6 +468,75 @@
         <div class="line-border-mobile"></div>
       </div>
     </div>
+    <div class="mobile mb-5">
+      <div>
+        <div class="flex flex-row py-3 mx-2" v-if="product_category.length > 0">
+          <div class="mr-auto flex flex-row">
+            <p class="text-title-mobile font-bold">Lainnya di kategori ini</p>
+          </div>
+          <div class="my-auto">
+            <nuxt-link
+              :to="'/category/' + products.slug_category"
+              class="mx-3 font-bold mobile-more-all"
+            >
+              Lihat Semua
+            </nuxt-link>
+          </div>
+        </div>
+        <div class="flex flex-row py-3" v-else>
+          <div class="mr-auto flex flex-row">
+            <div class="title-section"></div>
+          </div>
+          <div class="my-auto">
+            <div class="title-section"></div>
+          </div>
+        </div>
+      </div>
+      <div class="mb-5" id="bestSeller" v-if="product_category.length > 0">
+        <VueSlickCarousel
+          v-bind="mobile_settings"
+          v-if="Object.keys(product_category).length"
+        >
+          <div
+            class="card shadow-md"
+            v-for="product in product_category"
+            :key="product.id"
+            :size="product.size"
+          >
+            <NuxtLink :to="'/product/' + product.slug">
+              <img
+                class="card-img-top"
+                :src="path_image + '/assets/imgs/products/' + product.img"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title-mobile font-bold">{{ product.name }}</h5>
+                <div class="grid grid-cols-3 mb-2">
+                  <h5 class="card-text-promo-mobile line-through col-span-2">
+                    Rp.{{ product.disc_price }}
+                  </h5>
+                  <p class="card-text-dics-mobile font-semibold">
+                    -{{ product.disc }}%
+                  </p>
+                </div>
+                <h5 class="card-text-mobile font-bold">
+                  Rp.{{ product.price }}
+                </h5>
+              </div>
+            </NuxtLink>
+          </div>
+        </VueSlickCarousel>
+      </div>
+      <div class="flex" v-else>
+        <div class="flex-1 p-3">
+          <div class="product rounded-3xl"></div>
+        </div>
+        <div class="flex-1 p-3">
+          <div class="product rounded-3xl"></div>
+        </div>
+      </div>
+    </div>
+    <div class="line-border-mobile"></div>
     <RandomItem />
     <Footer />
     <NavigationBar />
@@ -475,6 +544,10 @@
 </template>
 
 <script>
+import VueSlickCarousel from 'vue-slick-carousel'
+import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+
 import Header from '../../components/Header'
 import RandomItem from '../../components/RandomItem'
 import Footer from '../../components/Footer'
@@ -486,7 +559,7 @@ const headers = {
 }
 export default {
   name: 'Product',
-  components: { Header, RandomItem, Footer, NavigationBar },
+  components: { Header, RandomItem, Footer, NavigationBar, VueSlickCarousel },
   head() {
     return {
       title: this.title + ' | EMSHOP',
@@ -494,8 +567,13 @@ export default {
   },
   data() {
     return {
+      mobile_settings: {
+        arrows: false,
+        slidesToShow: 2,
+      },
       isActive: true,
       desc_length: '',
+      product_category: [],
       products: [],
       links: [],
       title: '',
@@ -509,10 +587,19 @@ export default {
       const res = await axios.get(this.path + '/api/product/' + this.slug, {
         headers: headers,
       })
+      const res_category = await axios.get(
+        this.path + '/api/product/category/' + res.data.data.slug_category,
+        {
+          headers: headers,
+        }
+      )
+
       this.products = res.data.data
       this.links = res.data.data.link
       this.title = res.data.data.name
       this.desc_length = res.data.data.short_desc.length
+      this.product_category = res_category.data.data.data
+      console.log(this.product_category)
     } catch (error) {}
   },
 }
