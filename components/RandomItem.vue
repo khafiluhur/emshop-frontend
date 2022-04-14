@@ -76,7 +76,7 @@
       <div>
         <div class="flex flex-row py-3 mx-2" v-if="products.length > 0">
           <div class="mr-auto flex flex-row">
-            <p class="text-title-mobile font-bold">Pilihan Lain Untukmu</p>
+            <p class="text-title-mobile font-bold">Pilihan lain untukmu</p>
           </div>
           <div class="my-auto">
             <nuxt-link
