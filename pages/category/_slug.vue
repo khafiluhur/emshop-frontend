@@ -28,7 +28,7 @@
       <div class="mb-5" v-if="categories.length != 0">
         <img
           style="width: 100%"
-          :src="path_image + '/assets/imgs/category/' + this.categories.img"
+          :src="path_image + '/imgs/category/' + this.categories.img"
           alt=""
         />
       </div>
@@ -67,7 +67,8 @@ export default {
       categories: [],
       title: '',
       slug: this.$route.params.slug,
-      path_image: 'https://api.shobaro.com',
+      path_image: 'https://image.shobaro.com',
+      path_image1: 'https://api.shobaro.com/assets',
       path: 'https://api.shobaro.com',
     }
   },

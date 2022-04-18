@@ -26,7 +26,7 @@
           <NuxtLink :to="'/product/' + product.slug">
             <img
               class="card-img-top"
-              :src="path_image + '/assets/imgs/products/' + product.img"
+              :src="path_image + '/imgs/products/' + product.img"
               alt="Card image cap"
             />
             <div class="card-body">
@@ -87,7 +87,7 @@
           <NuxtLink :to="'/product/' + product.slug">
             <img
               class="card-img-top"
-              :src="path_image + '/assets/imgs/products/' + product.img"
+              :src="path_image + '/imgs/products/' + product.img"
               alt="Card image cap"
             />
             <div class="card-body">
@@ -131,7 +131,8 @@ export default {
     return {
       products: [],
       slug: this.$route.params.slug,
-      path_image: 'https://api.shobaro.com',
+      path_image: 'https://image.shobaro.com',
+      path_image1: 'https://api.shobaro.com/assets',
       path: 'https://api.shobaro.com',
     }
   },

@@ -32,7 +32,7 @@
             <NuxtLink :to="'/product/' + product.slug">
               <img
                 class="card-img-top"
-                :src="path_image + '/assets/imgs/products/' + product.img"
+                :src="path_image + '/imgs/products/' + product.img"
                 alt="Card image cap"
               />
               <div class="card-body">
@@ -68,51 +68,6 @@
           </div>
         </div>
       </div>
-      <!-- <div class="grid grid-cols-5 gap-4 mb-10" v-if="products.length > 0">
-        <div
-          class="card shadow-md"
-          v-for="product in products"
-          :key="product.id"
-          :size="product.size"
-        >
-          <NuxtLink :to="'/product/' + product.slug">
-            <img
-              class="card-img-top"
-              :src="path_image + '/assets/imgs/products/' + product.img"
-              alt="Card image cap"
-            />
-            <div class="card-body">
-              <h5 class="card-title font-bold">{{ product.name }}</h5>
-              <h5 class="card-text font-bold">Rp.{{ product.price }}</h5>
-              <div class="grid grid-cols-2">
-                <h5 class="card-text-promo line-through">
-                  Rp.{{ product.disc_price }}
-                </h5>
-                <p class="card-text-dics font-semibold">-{{ product.disc }}%</p>
-              </div>
-            </div>
-          </NuxtLink>
-        </div>
-      </div>
-      <div class="" v-else>
-        <div class="flex">
-          <div class="flex-1 p-3">
-            <div class="product rounded-3xl"></div>
-          </div>
-          <div class="flex-1 p-3">
-            <div class="product rounded-3xl"></div>
-          </div>
-          <div class="flex-1 p-3">
-            <div class="product rounded-3xl"></div>
-          </div>
-          <div class="flex-1 p-3">
-            <div class="product rounded-3xl"></div>
-          </div>
-          <div class="flex-1 p-3">
-            <div class="product rounded-3xl"></div>
-          </div>
-        </div>
-      </div> -->
       <div class="mb-5">
         <div class="striped-border"></div>
       </div>
@@ -155,7 +110,7 @@
             <NuxtLink :to="'/product/' + product.slug">
               <img
                 class="card-img-top"
-                :src="path_image + '/assets/imgs/products/' + product.img"
+                :src="path_image + '/imgs/products/' + product.img"
                 alt="Card image cap"
               />
               <div class="card-body">
@@ -212,7 +167,8 @@ export default {
         slidesToShow: 2,
       },
       products: [],
-      path_image: 'https://api.shobaro.com',
+      path_image: 'https://image.shobaro.com',
+      path_image1: 'https://api.shobaro.com/assets',
       path: 'https://api.shobaro.com',
     }
   },

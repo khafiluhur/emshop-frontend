@@ -12,7 +12,7 @@
               <img
                 class="mx-auto"
                 width="56"
-                :src="path_image + '/assets/imgs/category/' + category.icon"
+                :src="path_image + '/imgs/category/' + category.icon"
                 :alt="category.icon"
               />
             </div>
@@ -62,7 +62,7 @@
               <img
                 class="mx-auto"
                 width="56"
-                :src="path_image + '/assets/imgs/category/' + category.icon"
+                :src="path_image + '/imgs/category/' + category.icon"
                 :alt="category.icon"
               />
             </div>
@@ -104,7 +104,8 @@ export default {
   data() {
     return {
       categories: [],
-      path_image: 'https://api.shobaro.com',
+      path_image: 'https://image.shobaro.com',
+      path_image1: 'https://api.shobaro.com/assets',
       path: 'https://api.shobaro.com',
     }
   },

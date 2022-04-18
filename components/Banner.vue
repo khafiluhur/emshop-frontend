@@ -5,7 +5,7 @@
         <div v-for="banner in banners" :key="banner.id" :size="banner.size">
           <img
             class="rounded-3xl p-3"
-            :src="path_image + '/assets/imgs/banners/' + banner.img"
+            :src="path_image + '/imgs/banners/' + banner.img"
             :alt="banner.title"
           />
         </div>
@@ -30,7 +30,7 @@
         <div v-for="banner in banners" :key="banner.id" :size="banner.size">
           <img
             class=""
-            :src="path_image + '/assets/imgs/banners/' + banner.img"
+            :src="path_image + '/imgs/banners/' + banner.img"
             :alt="banner.title"
           />
         </div>
@@ -75,7 +75,8 @@ export default {
         autoplaySpeed: 4000,
       },
       banners: [],
-      path_image: 'https://api.shobaro.com',
+      path_image: 'https://image.shobaro.com',
+      path_image1: 'https://api.shobaro.com/assets',
       path: 'https://api.shobaro.com',
     }
   },
