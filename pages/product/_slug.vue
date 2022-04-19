@@ -25,7 +25,7 @@
               <img
                 class="border border-1"
                 width="300"
-                :src="path_image + '/imgs/products/' + this.products.img"
+                :src="path_image1 + '/imgs/products/' + this.products.img"
                 :alt="this.products.sku"
               />
             </div>
@@ -282,7 +282,7 @@
             <div class="" v-if="this.products.length != 0">
               <img
                 class="w-full"
-                :src="path_image + '/imgs/products/' + this.products.img"
+                :src="path_image1 + '/imgs/products/' + this.products.img"
                 :alt="this.products.img"
               />
             </div>
@@ -524,7 +524,7 @@
             <NuxtLink :to="'/product/' + product.slug">
               <img
                 class="card-img-top"
-                :src="path_image + '/imgs/products/' + product.img"
+                :src="path_image1 + '/imgs/products/' + product.img"
                 alt="Card image cap"
               />
               <div class="card-body">

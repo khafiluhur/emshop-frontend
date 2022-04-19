@@ -13,13 +13,6 @@
           </p>
         </nuxt-link>
       </div>
-      <!-- <div class="my-4 img-category" v-if="categories.length != 0">
-        <img
-          style="width: 100%"
-          :src="path_image + '/assets/imgs/category/' + this.categories.img"
-          alt=""
-        />
-      </div> -->
       <div v-else>
         <div class="banner-category"></div>
       </div>
@@ -28,7 +21,7 @@
       <div class="mb-5" v-if="categories.length != 0">
         <img
           style="width: 100%"
-          :src="path_image + '/imgs/category/' + this.categories.img"
+          :src="path_image1 + '/imgs/category/' + this.categories.img"
           alt=""
         />
       </div>

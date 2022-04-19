@@ -11,7 +11,7 @@
           <NuxtLink :to="'/product/' + product.slug">
             <img
               class="card-img-top"
-              :src="path_image + '/imgs/products/' + product.img"
+              :src="path_image1 + '/imgs/products/' + product.img"
               alt="Card image cap"
             />
             <div class="card-body">
@@ -61,7 +61,7 @@
           <NuxtLink :to="'/product/' + product.slug">
             <img
               class="card-img-top"
-              :src="path_image + '/imgs/products/' + product.img"
+              :src="path_image1 + '/imgs/products/' + product.img"
               alt="Card image cap"
             />
             <div class="card-body">
