@@ -236,7 +236,7 @@ export default {
   text-align: start;
 }
 .card-text-promo-mobile {
-  font-size: 12px;
+  font-size: 11px;
   text-align: start;
   color: #999;
 }
