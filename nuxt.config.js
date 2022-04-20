@@ -47,6 +47,18 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/firebase',
     '@nuxtjs/dotenv',
+    '@dansmaculotte/nuxt-security',
+    [
+      '@dansmaculotte/nuxt-security',
+      {
+        /* module options */
+        hsts: {
+          maxAge: 15552000,
+          includeSubDomains: true,
+          preload: true,
+        },
+      },
+    ],
   ],
 
   axios: {
