@@ -49,6 +49,18 @@ export default {
     '@nuxtjs/dotenv',
   ],
 
+  axios: {
+    proxy: true,
+  },
+
+  proxy: {
+    '/api/': {
+      target: 'http:/172.29.32.233/',
+      pathRewrite: { '^/api/': '' },
+      changeOrigin: true,
+    },
+  },
+
   firebase: {
     config: {
       apiKey: 'AIzaSyAWrubSv4BDnEXxFtYyMePfhbbW_LdacSc',
