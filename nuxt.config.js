@@ -54,6 +54,7 @@ export default {
     headers: {
       'X-Requested-With': 'XMLHttpRequest',
     },
+    proxyHeaders: false,
     credentials: true,
   },
 
