@@ -12,7 +12,7 @@
               <img
                 class="mx-auto"
                 width="56"
-                :src="path_image1 + '/imgs/category/' + category.icon"
+                :src="path + '/assets/imgs/category/' + category.icon"
                 :alt="category.icon"
               />
             </div>
@@ -62,7 +62,7 @@
               <img
                 class="mx-auto"
                 width="56"
-                :src="path_image1 + '/imgs/category/' + category.icon"
+                :src="path + '/assets/imgs/category/' + category.icon"
                 :alt="category.icon"
               />
             </div>
@@ -97,16 +97,14 @@
 <script>
 const axios = require('axios').default
 const headers = {
-  Authorization: 'Bearer 1|3mTRZGnfTJ4wB0iX7LbAQbEKo6ZtQIbB56zxbNpA',
+  Authorization: process.env.TOKEN,
 }
 export default {
   name: 'Category',
   data() {
     return {
       categories: [],
-      path_image: 'https://image.shobaro.com',
-      path_image1: 'https://api.shobaro.com/assets',
-      path: 'https://api.shobaro.com',
+      path: process.env.BASE_URL,
     }
   },
   async created() {

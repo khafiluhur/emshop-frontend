@@ -32,7 +32,7 @@
             <NuxtLink :to="'/product/' + product.slug">
               <img
                 class="card-img-top"
-                :src="path_image1 + '/imgs/products/' + product.img"
+                :src="path + '/assets/imgs/products/' + product.img"
                 alt="Card image cap"
               />
               <div
@@ -117,7 +117,7 @@
             <NuxtLink :to="'/product/' + product.slug">
               <img
                 class="card-img-top"
-                :src="path_image1 + '/imgs/products/' + product.img"
+                :src="path + '/assets/imgs/products/' + product.img"
                 alt="Card image cap"
               />
               <div
@@ -166,7 +166,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 
 const axios = require('axios').default
 const headers = {
-  Authorization: 'Bearer 1|3mTRZGnfTJ4wB0iX7LbAQbEKo6ZtQIbB56zxbNpA',
+  Authorization: process.env.TOKEN,
 }
 export default {
   name: 'BestSeller',
@@ -182,9 +182,7 @@ export default {
         slidesToShow: 2,
       },
       products: [],
-      path_image: 'https://image.shobaro.com',
-      path_image1: 'https://api.shobaro.com/assets',
-      path: 'https://api.shobaro.com',
+      path: process.env.BASE_URL,
     }
   },
   async created() {

@@ -5,7 +5,7 @@
         <div v-for="banner in banners" :key="banner.id" :size="banner.size">
           <img
             class="rounded-3xl p-3"
-            :src="path_image1 + '/imgs/banners/' + banner.img"
+            :src="path + '/assets/imgs/banners/' + banner.img"
             :alt="banner.title"
           />
         </div>
@@ -30,7 +30,7 @@
         <div v-for="banner in banners" :key="banner.id" :size="banner.size">
           <img
             class=""
-            :src="path_image1 + '/imgs/banners/' + banner.img"
+            :src="path + '/assets/imgs/banners/' + banner.img"
             :alt="banner.title"
           />
         </div>
@@ -51,7 +51,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 
 const axios = require('axios').default
 const headers = {
-  Authorization: 'Bearer 1|3mTRZGnfTJ4wB0iX7LbAQbEKo6ZtQIbB56zxbNpA',
+  Authorization: process.env.TOKEN,
 }
 export default {
   name: 'Banner',
@@ -75,9 +75,7 @@ export default {
         autoplaySpeed: 4000,
       },
       banners: [],
-      path_image: 'http://image.shobaro.com',
-      path_image1: 'https://api.shobaro.com/assets',
-      path: 'https://api.shobaro.com',
+      path: process.env.BASE_URL,
     }
   },
   async created() {

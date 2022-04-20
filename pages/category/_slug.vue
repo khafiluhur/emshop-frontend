@@ -21,7 +21,7 @@
       <div class="mb-5" v-if="categories.length != 0">
         <img
           style="width: 100%"
-          :src="path_image1 + '/imgs/category/' + this.categories.img"
+          :src="path + '/assets/imgs/category/' + this.categories.img"
           alt=""
         />
       </div>
@@ -45,7 +45,7 @@ import NavigationBar from '../../components/NavigationBar'
 
 const axios = require('axios').default
 const headers = {
-  Authorization: 'Bearer 1|3mTRZGnfTJ4wB0iX7LbAQbEKo6ZtQIbB56zxbNpA',
+  Authorization: process.env.TOKEN,
 }
 export default {
   name: 'Category',
@@ -60,9 +60,7 @@ export default {
       categories: [],
       title: '',
       slug: this.$route.params.slug,
-      path_image: 'https://image.shobaro.com',
-      path_image1: 'https://api.shobaro.com/assets',
-      path: 'https://api.shobaro.com',
+      path: process.env.BASE_URL,
     }
   },
   async created() {

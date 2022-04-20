@@ -46,6 +46,7 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     '@nuxtjs/firebase',
+    '@nuxtjs/dotenv',
   ],
 
   firebase: {

@@ -25,7 +25,7 @@
               <img
                 class="border border-1"
                 width="300"
-                :src="path_image1 + '/imgs/products/' + this.products.img"
+                :src="path + '/assets/imgs/products/' + this.products.img"
                 :alt="this.products.sku"
               />
             </div>
@@ -558,7 +558,7 @@
             <NuxtLink :to="'/product/' + product.slug">
               <img
                 class="card-img-top"
-                :src="path_image1 + '/imgs/products/' + product.img"
+                :src="path + '/assets/imgs/products/' + product.img"
                 alt="Card image cap"
               />
               <div class="card-body">
@@ -607,7 +607,7 @@ import NavigationBar from '../../components/NavigationBar'
 
 const axios = require('axios').default
 const headers = {
-  Authorization: 'Bearer 1|3mTRZGnfTJ4wB0iX7LbAQbEKo6ZtQIbB56zxbNpA',
+  Authorization: process.env.TOKEN,
 }
 export default {
   name: 'Product',
@@ -630,9 +630,7 @@ export default {
       links: [],
       title: '',
       slug: this.$route.params.slug,
-      path_image: 'https://image.shobaro.com',
-      path_image1: 'https://api.shobaro.com/assets',
-      path: 'https://api.shobaro.com',
+      path: process.env.BASE_URL,
     }
   },
   async created() {
