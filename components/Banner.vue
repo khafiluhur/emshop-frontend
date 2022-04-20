@@ -76,7 +76,7 @@ export default {
         autoplaySpeed: 4000,
       },
       banners: [],
-      path: process.env.BASE_URL,
+      path: process.env.API_URL,
     }
   },
   async created() {

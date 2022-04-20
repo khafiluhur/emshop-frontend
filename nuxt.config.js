@@ -1,6 +1,5 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
-  ssr: false,
   head: {
     title: 'EMSHOP',
     meta: [
@@ -48,36 +47,7 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/firebase',
     '@nuxtjs/dotenv',
-    '@dansmaculotte/nuxt-security',
-    [
-      '@dansmaculotte/nuxt-security',
-      {
-        /* module options */
-        hsts: {
-          maxAge: 15552000,
-          includeSubDomains: true,
-          preload: true,
-        },
-      },
-    ],
   ],
-
-  axios: {
-    proxy: true,
-    headers: {
-      'X-Requested-With': 'XMLHttpRequest',
-    },
-    proxyHeaders: false,
-    credentials: true,
-  },
-
-  proxy: {
-    '/api/': {
-      target: 'http:/172.29.32.233/',
-      pathRewrite: { '^/api/': '' },
-      changeOrigin: true,
-    },
-  },
 
   firebase: {
     config: {
