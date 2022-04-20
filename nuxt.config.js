@@ -47,7 +47,12 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/firebase',
     '@nuxtjs/dotenv',
+    '@nuxtjs/proxy',
   ],
+
+  proxy: {
+    '/api/': { target: process.env.API_URL, pathRewrite: { '^/api/': '' } },
+  },
 
   firebase: {
     config: {
