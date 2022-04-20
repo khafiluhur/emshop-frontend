@@ -52,6 +52,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 const axios = require('axios').default
 const headers = {
   Authorization: process.env.TOKEN,
+  'X-Requested-With': 'XMLHttpRequest',
 }
 export default {
   name: 'Banner',
