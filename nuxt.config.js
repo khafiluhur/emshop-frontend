@@ -51,6 +51,10 @@ export default {
 
   axios: {
     proxy: true,
+    headers: {
+      'X-Requested-With': 'XMLHttpRequest',
+    },
+    credentials: true,
   },
 
   proxy: {
