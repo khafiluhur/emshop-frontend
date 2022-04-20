@@ -26,10 +26,13 @@
           <NuxtLink :to="'/product/' + product.slug">
             <img
               class="card-img-top"
-              :src="path_image + '/imgs/products/' + product.img"
+              :src="path_image1 + '/imgs/products/' + product.img"
               alt="Card image cap"
             />
-            <div class="card-body">
+            <div
+              class="card-body"
+              v-if="product.disc != '0' && products.price != '0'"
+            >
               <h5 class="card-title font-bold">{{ product.name }}</h5>
               <h5 class="card-text font-bold">Rp.{{ product.price }}</h5>
               <div class="grid grid-cols-2">
@@ -38,6 +41,10 @@
                 </h5>
                 <p class="card-text-dics font-semibold">-{{ product.disc }}%</p>
               </div>
+            </div>
+            <div class="card-body" v-else>
+              <h5 class="card-title font-bold">{{ product.name }}</h5>
+              <h5 class="card-text font-bold">Rp.{{ product.disc_price }}</h5>
             </div>
           </NuxtLink>
         </div>
@@ -87,10 +94,13 @@
           <NuxtLink :to="'/product/' + product.slug">
             <img
               class="card-img-top"
-              :src="path_image + '/imgs/products/' + product.img"
+              :src="path_image1 + '/imgs/products/' + product.img"
               alt="Card image cap"
             />
-            <div class="card-body">
+            <div
+              class="card-body"
+              v-if="product.disc != '0' && products.price != '0'"
+            >
               <h5 class="card-title-mobile font-bold">{{ product.name }}</h5>
               <div class="grid grid-cols-3 mb-2">
                 <h5 class="card-text-promo-mobile line-through col-span-2">
@@ -101,6 +111,12 @@
                 </p>
               </div>
               <h5 class="card-text-mobile font-bold">Rp.{{ product.price }}</h5>
+            </div>
+            <div class="card-body" v-else>
+              <h5 class="card-title-mobile font-bold">{{ product.name }}</h5>
+              <h5 class="card-text-mobile font-bold">
+                Rp.{{ product.disc_price }}
+              </h5>
             </div>
           </NuxtLink>
         </div>

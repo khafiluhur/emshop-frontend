@@ -47,7 +47,10 @@
                 Kode item: {{ this.products.sku }}
               </h3>
               <div class="pb-3 mb-2 title-code-product-loading" v-else></div>
-              <div class="row">
+              <div
+                class="row"
+                v-if="this.products.disc != '0' && this.products.price != '0'"
+              >
                 <div class="col-2 disc-col" v-if="this.products.length != 0">
                   <div class="dicount font-bold">
                     <p class="py-2 px-2">-{{ this.products.disc }}%</p>
@@ -76,6 +79,19 @@
                   </div>
                   <div v-else>
                     <div class="product-disc-price"></div>
+                  </div>
+                </div>
+              </div>
+              <div v-else>
+                <div class="col-10 text-start mb-5">
+                  <h4
+                    class="text-price font-bold mb-0 text-normal-price"
+                    v-if="this.products.length != 0"
+                  >
+                    Rp{{ this.products.disc_price }}
+                  </h4>
+                  <div class="mb-1" v-else>
+                    <div class="product-price-loading"></div>
                   </div>
                 </div>
               </div>
@@ -290,24 +306,42 @@
               <div class="image-product-mobile"></div>
             </div>
             <div class="mx-2 mt-5">
-              <div class="flex" v-if="this.products.length != 0">
-                <p class="text-price-mobile pe-2">
-                  <s>Rp{{ this.products.disc_price }}</s>
-                </p>
-                <p class="text-disc-mobile font-bold ml-3">
-                  -{{ this.products.disc }}%
-                </p>
-              </div>
-              <div v-else>
-                <div class="product-disc-price"></div>
+              <div
+                v-if="this.products.disc != '0' && this.products.price != '0'"
+              >
+                <div class="flex" v-if="this.products.length != 0">
+                  <p class="text-price-mobile pe-2">
+                    <s>Rp{{ this.products.disc_price }}</s>
+                  </p>
+                  <p class="text-disc-mobile font-bold ml-3">
+                    -{{ this.products.disc }}%
+                  </p>
+                </div>
+                <div v-else>
+                  <div class="product-disc-price"></div>
+                </div>
               </div>
               <div class="grid grid-cols-4 gap-4">
-                <div class="text-start mb-3 col-span-3">
+                <div
+                  class="text-start mb-3 col-span-3"
+                  v-if="this.products.disc != '0' && this.products.price != '0'"
+                >
                   <h4
                     class="text-price font-bold mb-0 text-special-price-mobile"
                     v-if="this.products.length != 0"
                   >
                     Rp{{ this.products.price }}
+                  </h4>
+                  <div class="mb-1" v-else>
+                    <div class="product-price-loading"></div>
+                  </div>
+                </div>
+                <div class="text-start mb-3 col-span-3" v-else>
+                  <h4
+                    class="text-price font-bold mb-0 text-special-price-mobile"
+                    v-if="this.products.length != 0"
+                  >
+                    Rp{{ this.products.disc_price }}
                   </h4>
                   <div class="mb-1" v-else>
                     <div class="product-price-loading"></div>
@@ -618,7 +652,6 @@ export default {
       this.title = res.data.data.name
       this.desc_length = res.data.data.short_desc.length
       this.product_category = res_category.data.data.data
-      console.log(this.product_category)
     } catch (error) {}
   },
 }
@@ -888,5 +921,9 @@ export default {
 .container_desc {
   max-height: 163px;
   overflow: hidden;
+}
+.text-normal-price {
+  color: black;
+  font-size: 18px;
 }
 </style>
