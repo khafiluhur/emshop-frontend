@@ -50,10 +50,6 @@ export default {
     '@nuxtjs/proxy',
   ],
 
-  proxy: {
-    '/api/': { target: process.env.API_URL, pathRewrite: { '^/api/': '' } },
-  },
-
   firebase: {
     config: {
       apiKey: 'AIzaSyAWrubSv4BDnEXxFtYyMePfhbbW_LdacSc',

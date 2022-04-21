@@ -51,7 +51,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 
 const axios = require('axios').default
 const headers = {
-  Authorization: process.env.TOKEN,
+  Authorization: process.env.API_KEY,
 }
 export default {
   name: 'Banner',
@@ -75,13 +75,13 @@ export default {
         autoplaySpeed: 4000,
       },
       banners: [],
-      path: '//172.29.32.233',
+      path: process.env.API_URL,
     }
   },
   async created() {
     try {
       const res = await axios.get(this.path + '/api/banner', {
-        headers: headers,
+        headers,
       })
       this.banners = res.data.data
     } catch (error) {}
