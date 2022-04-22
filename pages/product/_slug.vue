@@ -298,9 +298,7 @@
             <div class="" v-if="this.products.length != 0">
               <img
                 class="w-full"
-                :src="
-                  path_image1 + '/assets/imgs/products/' + this.products.img
-                "
+                :src="path + '/assets/imgs/products/' + this.products.img"
                 :alt="this.products.img"
               />
             </div>
