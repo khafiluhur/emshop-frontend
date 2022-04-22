@@ -165,7 +165,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 
 const axios = require('axios').default
 const headers = {
-  Authorization: process.env.TOKEN,
+  Authorization: process.env.API_KEY,
 }
 export default {
   name: 'BestSeller',
@@ -181,7 +181,7 @@ export default {
         slidesToShow: 2,
       },
       products: [],
-      path: process.env.BASE_URL,
+      path: process.env.API_URL,
     }
   },
   async created() {

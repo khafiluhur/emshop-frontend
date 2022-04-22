@@ -97,14 +97,14 @@
 <script>
 const axios = require('axios').default
 const headers = {
-  Authorization: process.env.TOKEN,
+  Authorization: process.env.API_KEY,
 }
 export default {
   name: 'Category',
   data() {
     return {
       categories: [],
-      path: process.env.BASE_URL,
+      path: process.env.API_URL,
     }
   },
   async created() {

@@ -47,7 +47,6 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/firebase',
     '@nuxtjs/dotenv',
-    '@nuxtjs/proxy',
   ],
 
   firebase: {

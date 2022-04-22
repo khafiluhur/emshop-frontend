@@ -138,7 +138,7 @@
 <script>
 const axios = require('axios').default
 const headers = {
-  Authorization: process.env.TOKEN,
+  Authorization: process.env.API_KEY,
 }
 
 export default {
@@ -147,7 +147,7 @@ export default {
     return {
       products: [],
       slug: this.$route.params.slug,
-      path: process.env.BASE_URL,
+      path: process.env.API_URL,
     }
   },
   async created() {

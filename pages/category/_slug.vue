@@ -2,7 +2,7 @@
   <div>
     <Header />
     <div class="desktop">
-      <div class="mx-12 mt-10 flex" v-if="this.categories.length != 0">
+      <div class="mx-12 mt-10 flex">
         <nuxt-link to="/">
           <p style="color: #999999">Home</p>
         </nuxt-link>
@@ -12,9 +12,6 @@
             {{ this.categories.name }}
           </p>
         </nuxt-link>
-      </div>
-      <div v-else>
-        <div class="banner-category"></div>
       </div>
     </div>
     <div class="mobile">
