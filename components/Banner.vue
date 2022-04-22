@@ -80,7 +80,7 @@ export default {
   },
   async created() {
     try {
-      const res = await axios.get(this.path + '/api/banner', {
+      const res = await axios.get('/api/banner', {
         headers,
       })
       this.banners = res.data.data
