@@ -42,7 +42,7 @@ import NavigationBar from '../../components/NavigationBar'
 
 const axios = require('axios').default
 const headers = {
-  Authorization: process.env.TOKEN,
+  Authorization: process.env.API_KEY,
 }
 export default {
   name: 'Category',
@@ -57,7 +57,7 @@ export default {
       categories: [],
       title: '',
       slug: this.$route.params.slug,
-      path: process.env.BASE_URL,
+      path: process.env.API_URL,
     }
   },
   async created() {
