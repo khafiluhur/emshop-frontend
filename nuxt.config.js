@@ -78,6 +78,10 @@ export default {
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
+    icon: {
+      source: '/icon-144x144.png',
+      fileName: 'icon-144x144.png',
+    },
     meta: {
       title: 'EMSHOP',
       author: 'EMSHOP',
