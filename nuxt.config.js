@@ -31,11 +31,15 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/google-analytics',
   ],
 
   publicRuntimeConfig: {
     axios: {
       baseURL: '',
+    },
+    googleAnalytics: {
+      id: process.env.GOOGLE_ANALYTICS_ID,
     },
   },
 
@@ -63,6 +67,10 @@ export default {
     services: {
       storage: true,
     },
+  },
+
+  googleAnalytics: {
+    id: process.env.GOOGLE_ANALYTICS_ID, // Use as fallback if no runtime config is provided
   },
 
   proxy: {
