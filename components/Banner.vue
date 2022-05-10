@@ -3,7 +3,8 @@
     <div class="desktop mx-12 my-5">
       <VueSlickCarousel v-bind="settings" v-if="Object.keys(banners).length">
         <div v-for="banner in banners" :key="banner.id" :size="banner.size">
-          <img
+          <nuxt-img
+            format="webp"
             class="rounded-3xl p-3"
             :src="path + '/assets/imgs/banners/' + banner.img"
             :alt="banner.title"
@@ -28,7 +29,8 @@
         v-if="Object.keys(banners).length"
       >
         <div v-for="banner in banners" :key="banner.id" :size="banner.size">
-          <img
+          <nuxt-img
+            format="webp"
             class=""
             :src="path + '/assets/imgs/banners/' + banner.img"
             :alt="banner.title"

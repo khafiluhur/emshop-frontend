@@ -32,6 +32,7 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxtjs/google-analytics',
+    '@nuxt/image',
   ],
 
   publicRuntimeConfig: {
@@ -52,6 +53,7 @@ export default {
     '@nuxtjs/firebase',
     '@nuxtjs/dotenv',
     '@nuxtjs/proxy',
+    '@nuxt/image',
   ],
 
   firebase: {
