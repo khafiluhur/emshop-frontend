@@ -9,8 +9,7 @@
         >
           <NuxtLink :to="'/category/' + category.slug">
             <div class="icon-category text-center">
-              <nuxt-img
-                format="webp"
+              <img
                 class="mx-auto"
                 width="56"
                 :src="path + '/assets/imgs/category/' + category.icon"
@@ -60,8 +59,7 @@
         >
           <NuxtLink :to="'/category/' + category.slug">
             <div class="icon-category text-center w-11 mx-auto">
-              <nuxt-img
-                format="webp"
+              <img
                 class="mx-auto"
                 width="56"
                 :src="path + '/assets/imgs/category/' + category.icon"

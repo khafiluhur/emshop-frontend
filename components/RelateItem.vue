@@ -30,8 +30,7 @@
             :size="product.size"
           >
             <NuxtLink :to="'/product/' + product.slug">
-              <nuxt-img
-                format="webp"
+              <img
                 class="card-img-top"
                 :src="path + '/assets/imgs/products/' + product.img"
                 alt="Card image cap"
@@ -116,8 +115,7 @@
             :size="product.size"
           >
             <NuxtLink :to="'/product/' + product.slug">
-              <nuxt-img
-                format="webp"
+              <img
                 class="card-img-top"
                 :src="path + '/assets/imgs/products/' + product.img"
                 alt="Card image cap"
