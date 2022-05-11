@@ -92,7 +92,7 @@ export default {
 .text-menu:hover {
   color: #f37727;
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 979px) {
   .desktop {
     display: none;
   }
@@ -100,7 +100,7 @@ export default {
     display: block;
   }
 }
-@media screen and (min-width: 426px) {
+@media screen and (min-width: 980px) {
   .desktop {
     display: block;
   }

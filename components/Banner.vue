@@ -134,6 +134,9 @@ export default {
   -webkit-animation: 1.5s shine linear infinite;
   animation: 1.5s shine linear infinite;
 }
+.slick-slide img {
+  width: 100%;
+}
 @-webkit-keyframes shine {
   to {
     background-position-x: -200%;
