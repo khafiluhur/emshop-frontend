@@ -53,7 +53,6 @@ export default {
     '@nuxtjs/firebase',
     '@nuxtjs/dotenv',
     '@nuxtjs/proxy',
-    '@nuxt/image',
   ],
 
   firebase: {
