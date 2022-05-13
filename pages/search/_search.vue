@@ -61,11 +61,17 @@
         <div class="striped-border"></div>
       </div>
     </div>
+    <Description />
+    <Footer />
+    <NavigationBar />
   </div>
 </template>
 
 <script>
 import Header from '../../components/Header'
+import Description from '../../components/Description'
+import Footer from '../../components/Footer'
+import NavigationBar from '../../components/NavigationBar'
 
 const axios = require('axios').default
 const headers = {
@@ -75,6 +81,9 @@ export default {
   name: 'SearchPage',
   components: {
     Header,
+    Description,
+    Footer,
+    NavigationBar,
   },
   data() {
     return {
