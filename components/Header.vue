@@ -62,7 +62,7 @@
               id="search"
               name="search"
               placeholder="Cari Produk"
-              maxlength="10"
+              maxlength="100"
               autocomplete="off"
             />
           </form>
