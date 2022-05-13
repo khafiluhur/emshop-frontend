@@ -143,7 +143,7 @@
         class="float-left py-6 px-6 absolute"
         v-if="this.route != 'index'"
       >
-        <img src="../static/left.svg" alt="back" />
+        <img src="../static/Left.svg" alt="back" />
       </a>
       <div class="text-center py-5 bg-white">
         <NuxtLink to="/">
