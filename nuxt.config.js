@@ -32,7 +32,6 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxtjs/google-analytics',
-    '@nuxt/image',
   ],
 
   publicRuntimeConfig: {
