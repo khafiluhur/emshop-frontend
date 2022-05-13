@@ -103,7 +103,6 @@ export default {
         })
         .then((resp) => {
           this.products = resp.data.data.data
-          console.log(this.product)
         })
     } catch (error) {}
   },
