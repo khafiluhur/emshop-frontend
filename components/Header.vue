@@ -42,7 +42,7 @@
           >
         </div>
       </div>
-      <div class="flex flex-row px-12 py-6 bg-header-second">
+      <div class="flex flex-row px-12 py-6 bg-header-second hidden">
         <NuxtLink class="mr-10" to="/">
           <img width="152" src="../static/logo.png" alt="logo_emshop" />
         </NuxtLink>
