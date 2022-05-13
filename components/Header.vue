@@ -1,6 +1,13 @@
 <template>
   <div class="shadow-md sticky top-0 z-10">
-    <div class="desktop">
+    <div
+      class="desktop"
+      @click="
+        {
+          isSearch = true
+        }
+      "
+    >
       <div class="flex flex-row px-12 py-3 bg-header-first">
         <div class="mr-auto flex flex-row">
           <p class="text-download my-auto font-bold">Download app</p>
@@ -46,8 +53,8 @@
         <NuxtLink class="mr-10" to="/">
           <img width="152" src="../static/logo.png" alt="logo_emshop" />
         </NuxtLink>
-        <div class="w-full hidden">
-          <form>
+        <div class="w-full">
+          <form :action="`/search`">
             <input
               v-model="myInput"
               @keyup="getLength"
@@ -55,86 +62,49 @@
               id="search"
               name="search"
               placeholder="Cari Produk"
+              maxlength="100"
               autocomplete="off"
             />
           </form>
         </div>
       </div>
     </div>
-    <div
-      class="fixed w-full hidden"
-      style="top: 124px"
-      :class="{ hidden: isSearch }"
-    >
+    <div class="fixed w-full" style="top: 124px" :class="{ hidden: isSearch }">
       <div class="result-search shadow-md overscroll-contain">
         <div v-for="data in datas" :key="data.id" :size="data.size">
-          <div class="p-5 card-result">
-            <div class="img-result text-center" style="width: 270px">
-              <img
-                class="w-1/2"
-                :src="path + '/assets/imgs/products/' + data.img"
-                alt="product"
-              />
-            </div>
-            <div class="text-result py-8">
-              <p class="font-bold">
-                {{ data.name }}
-              </p>
-              <p>Rp {{ data.price }}</p>
-              <div>
-                <p class="line-through float-left mr-4">
-                  Rp {{ data.disc_price }}
+          <NuxtLink :to="'/product/' + data.slug">
+            <div class="p-5 card-result">
+              <div class="img-result text-center" style="width: 270px">
+                <img
+                  class="w-1/2"
+                  :src="path + '/assets/imgs/products/' + data.img"
+                  alt="product"
+                />
+              </div>
+              <div class="text-result py-8">
+                <p class="font-bold">
+                  {{ data.name }}
                 </p>
-                <p class="card-text-dics font-semibold">-{{ data.disc }}%</p>
+                <p>Rp {{ data.price }}</p>
+                <div>
+                  <p class="line-through float-left mr-4">
+                    Rp {{ data.disc_price }}
+                  </p>
+                  <p class="card-text-dics font-semibold">-{{ data.disc }}%</p>
+                </div>
               </div>
             </div>
-          </div>
+          </NuxtLink>
           <hr class="mx-10" />
         </div>
-        <!-- <div>
-          <div class="p-5 card-result">
-            <div class="img-result text-center" style="width: 270px">
-              <img
-                class="w-1/2"
-                src="https://api.shobaro.com/assets/imgs/products/lock-n-lock-air-fryer-rose-gold-black-knife-set.jpg"
-                alt="product"
-              />
-            </div>
-            <div class="text-result py-8">
-              <p class="font-bold">
-                LOCK N LOCK AIR FRYER ROSE GOLD + BLACK KNIFE SET
-              </p>
-              <p>Rp.799.000</p>
-              <div>
-                <p class="line-through float-left mr-4">Rp.1.799.000</p>
-                <p class="card-text-dics font-semibold">-56%</p>
-              </div>
-            </div>
+        <NuxtLink :to="'/search?q=' + myInput">
+          <div
+            class="p-4 text-center"
+            style="background-color: #3374dd; color: white"
+          >
+            Tampilkan Semua
           </div>
-          <hr class="mx-10" />
-        </div>
-        <div>
-          <div class="p-5 card-result">
-            <div class="img-result text-center" style="width: 270px">
-              <img
-                class="w-1/2"
-                src="https://api.shobaro.com/assets/imgs/products/lock-n-lock-low-carbo-rice-cooker-v2-knife-set.jpg"
-                alt="product"
-              />
-            </div>
-            <div class="text-result py-8">
-              <p class="font-bold">
-                LOCK N LOCK LOW CARBO RICE COOKER V2 + KNIFE SET
-              </p>
-              <p>Rp.999.000</p>
-              <div>
-                <p class="line-through float-left mr-4">Rp.2.379.000</p>
-                <p class="card-text-dics font-semibold">-59%</p>
-              </div>
-            </div>
-          </div>
-          <hr class="mx-10" />
-        </div> -->
+        </NuxtLink>
       </div>
     </div>
     <div class="mobile">
@@ -177,12 +147,12 @@ export default {
   methods: {
     getLength: function () {
       this.input = this.myInput
-      if (this.input.length >= 3) {
+      if (this.input.length >= 1) {
         try {
           axios
             .get(this.path + '/api/product/search', {
               params: {
-                search: this.input,
+                q: this.input,
               },
               headers: headers,
             })
@@ -195,7 +165,7 @@ export default {
             axios
               .get(this.path + '/api/product/search', {
                 params: {
-                  search: this.input,
+                  q: this.input,
                 },
                 headers: headers,
               })
@@ -206,7 +176,9 @@ export default {
         } else {
           this.isSearch = true
         }
-      } else this.isSearch = true
+      } else {
+        this.isSearch = true
+      }
     },
     back() {
       this.$router.go(-1)
