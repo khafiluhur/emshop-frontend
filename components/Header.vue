@@ -139,6 +139,7 @@ export default {
       datas: [],
       path: process.env.API_URL,
       isSearch: true,
+      list: '',
     }
   },
   mounted() {
@@ -153,6 +154,7 @@ export default {
             .get(this.path + '/api/product/search', {
               params: {
                 q: this.input,
+                list: this.list,
               },
               headers: headers,
             })
@@ -166,6 +168,7 @@ export default {
               .get(this.path + '/api/product/search', {
                 params: {
                   q: this.input,
+                  list: this.list,
                 },
                 headers: headers,
               })

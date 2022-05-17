@@ -90,6 +90,7 @@ export default {
       products: [],
       slug: this.$route.query.search,
       path: process.env.API_URL,
+      list: 'all',
     }
   },
   async created() {
@@ -98,6 +99,7 @@ export default {
         .get(this.path + '/api/product/search', {
           params: {
             q: this.slug,
+            list: this.list,
           },
           headers: headers,
         })

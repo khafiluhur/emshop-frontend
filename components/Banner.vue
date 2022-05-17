@@ -79,13 +79,22 @@ export default {
       path: process.env.API_URL,
     }
   },
-  async created() {
-    try {
+  async mounted() {
+    this.load()
+    // try {
+    //   const res = await axios.get(this.path + '/api/banner', {
+    //     headers,
+    //   })
+    //   this.banners = res.data.data
+    // } catch (error) {}
+  },
+  methods: {
+    async load() {
       const res = await axios.get(this.path + '/api/banner', {
         headers,
       })
       this.banners = res.data.data
-    } catch (error) {}
+    },
   },
 }
 </script>
