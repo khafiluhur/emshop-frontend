@@ -678,7 +678,6 @@ export default {
   },
   methods: {
     view(eco) {
-      console.log(eco)
       axios.get(this.path + '/api/product/click' + this.slug + '?eco=' + eco, {
         headers: headers,
       })
