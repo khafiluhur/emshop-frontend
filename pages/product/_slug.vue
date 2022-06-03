@@ -649,7 +649,7 @@ export default {
       this.links = res.data.data.link
       this.title = res.data.data.name
       this.desc_length = res.data.data.short_desc.length
-      this.product_category = res_category.data.data.data
+      this.product_category = res_category.data.data.data.slice(0, 5)
     } catch (error) {}
   },
 }

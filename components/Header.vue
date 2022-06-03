@@ -81,7 +81,10 @@
                   alt="product"
                 />
               </div>
-              <div class="text-result py-8">
+              <div
+                class="text-result py-8"
+                v-if="data.disc != '0' && data.price != '0'"
+              >
                 <p class="font-bold">
                   {{ data.name }}
                 </p>
@@ -93,10 +96,17 @@
                   <p class="card-text-dics font-semibold">-{{ data.disc }}%</p>
                 </div>
               </div>
+              <div class="text-result py-8" v-else>
+                <p class="font-bold">
+                  {{ data.name }}
+                </p>
+                <p>Rp {{ data.disc_price }}</p>
+              </div>
             </div>
           </NuxtLink>
           <hr class="mx-10" />
         </div>
+
         <NuxtLink :to="'/search?q=' + myInput">
           <div
             class="p-4 text-center"
@@ -142,9 +152,7 @@ export default {
       list: '',
     }
   },
-  mounted() {
-    // console.log(this.route)
-  },
+  mounted() {},
   methods: {
     getLength: function () {
       this.input = this.myInput
