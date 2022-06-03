@@ -142,7 +142,11 @@
                         class="nav-item mx-3"
                         v-if="this.links.aladin != 'aladin'"
                       >
-                        <a target="_blank" :href="this.links.aladin">
+                        <a
+                          target="_blank"
+                          :href="this.links.aladin"
+                          v-on:click="view('mister_aladin')"
+                        >
                           <div
                             class="shadow-sm border border-1 aladin-order btn-order"
                           >
@@ -159,7 +163,11 @@
                         class="nav-item mx-3"
                         v-if="this.links.tokopedia != 'tokopedia'"
                       >
-                        <a target="_blank" :href="this.links.tokopedia">
+                        <a
+                          target="_blank"
+                          :href="this.links.tokopedia"
+                          v-on:click="view('tokopedia')"
+                        >
                           <div
                             class="shadow-sm border border-1 tokopedia-order btn-order"
                           >
@@ -176,7 +184,11 @@
                         class="nav-item5 mx-3"
                         v-if="this.links.shopee != 'shopee'"
                       >
-                        <a target="_blank" :href="this.links.shopee">
+                        <a
+                          target="_blank"
+                          :href="this.links.shopee"
+                          v-on:click="view('shopee')"
+                        >
                           <div
                             class="shadow-sm border border-1 shopee-order btn-order"
                           >
@@ -193,7 +205,11 @@
                         class="nav-item5 mx-3"
                         v-if="this.links.lazada != 'lazada'"
                       >
-                        <a target="_blank" :href="this.links.lazada">
+                        <a
+                          target="_blank"
+                          :href="this.links.lazada"
+                          v-on:click="view('lazada')"
+                        >
                           <div
                             class="shadow-sm border border-1 lazada-order btn-order"
                           >
@@ -210,7 +226,11 @@
                         class="nav-item5 mx-3"
                         v-if="this.links.blibli != 'blibli'"
                       >
-                        <a target="_blank" :href="this.links.blibli">
+                        <a
+                          target="_blank"
+                          :href="this.links.blibli"
+                          v-on:click="view('blibli')"
+                        >
                           <div
                             class="shadow-sm border border-1 blibli-order btn-order"
                           >
@@ -227,7 +247,11 @@
                         class="nav-item5 mx-3"
                         v-if="this.links.bukalapak != 'bukalapak'"
                       >
-                        <a target="_blank" :href="this.links.bukalapak">
+                        <a
+                          target="_blank"
+                          :href="this.links.bukalapak"
+                          v-on:click="view('bukalapak')"
+                        >
                           <div
                             class="shadow-sm border border-1 bukalapak-order btn-order text-center"
                           >
@@ -651,6 +675,14 @@ export default {
       this.desc_length = res.data.data.short_desc.length
       this.product_category = res_category.data.data.data.slice(0, 5)
     } catch (error) {}
+  },
+  methods: {
+    view(eco) {
+      console.log(eco)
+      axios.get(this.path + '/api/product/click' + this.slug + '?eco=' + eco, {
+        headers: headers,
+      })
+    },
   },
 }
 </script>
