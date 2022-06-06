@@ -145,7 +145,7 @@
                         <a
                           target="_blank"
                           :href="this.links.aladin"
-                          v-on:click="view('mister_aladin')"
+                          v-on:click="viewclik('aladin_mall')"
                         >
                           <div
                             class="shadow-sm border border-1 aladin-order btn-order"
@@ -166,7 +166,7 @@
                         <a
                           target="_blank"
                           :href="this.links.tokopedia"
-                          v-on:click="view('tokopedia')"
+                          v-on:click="viewclik('tokopedia')"
                         >
                           <div
                             class="shadow-sm border border-1 tokopedia-order btn-order"
@@ -187,7 +187,7 @@
                         <a
                           target="_blank"
                           :href="this.links.shopee"
-                          v-on:click="view('shopee')"
+                          v-on:click="viewclik('shopee')"
                         >
                           <div
                             class="shadow-sm border border-1 shopee-order btn-order"
@@ -208,7 +208,7 @@
                         <a
                           target="_blank"
                           :href="this.links.lazada"
-                          v-on:click="view('lazada')"
+                          v-on:click="viewclik('lazada')"
                         >
                           <div
                             class="shadow-sm border border-1 lazada-order btn-order"
@@ -229,7 +229,7 @@
                         <a
                           target="_blank"
                           :href="this.links.blibli"
-                          v-on:click="view('blibli')"
+                          v-on:click="viewclik('blibli')"
                         >
                           <div
                             class="shadow-sm border border-1 blibli-order btn-order"
@@ -250,7 +250,7 @@
                         <a
                           target="_blank"
                           :href="this.links.bukalapak"
-                          v-on:click="view('bukalapak')"
+                          v-on:click="viewclik('bukalapak')"
                         >
                           <div
                             class="shadow-sm border border-1 bukalapak-order btn-order text-center"
@@ -655,6 +655,7 @@ export default {
       title: '',
       slug: this.$route.params.slug,
       path: process.env.API_URL,
+      eco: '',
     }
   },
   async created() {
@@ -677,10 +678,17 @@ export default {
     } catch (error) {}
   },
   methods: {
-    view(eco) {
-      axios.get(this.path + '/api/product/click' + this.slug + '?eco=' + eco, {
-        headers: headers,
-      })
+    viewclik(eco) {
+      axios
+        .get(this.path + '/api/product/click/' + this.slug + '?eco=' + eco, {
+          headers: headers,
+        })
+        .then((response) => {
+          this.Data = response.data
+        })
+        .catch((e) => {
+          this.errors.push(e)
+        })
     },
   },
 }
