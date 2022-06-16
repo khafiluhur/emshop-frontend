@@ -5,7 +5,7 @@
         <img src="../static/contact-us.jpeg" />
       </div>
       <div class="mx-96">
-        <p class="mb-5 font-bold">PT MNC GS HOMESHOPPING</p>
+        <h1 class="mb-5 font-bold">PT MNC GS HOMESHOPPING</h1>
         <p class="mb-5">
           MNC Tower Lt.20 Jl. Kebon Sirih No.17-19 Menteng Jakarta Pusat 10340
           Indonesia
@@ -25,7 +25,7 @@
         <img src="../static/contact-us.jpeg" />
       </div>
       <div class="mx-2 my-5">
-        <p class="mb-5 font-bold">PT MNC GS HOMESHOPPING</p>
+        <h1 class="mb-5 font-bold">PT MNC GS HOMESHOPPING</h1>
         <p class="mb-5">
           MNC Tower Lt.20 Jl. Kebon Sirih No.17-19 Menteng Jakarta Pusat 10340
           Indonesia

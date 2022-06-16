@@ -2,7 +2,7 @@
   <div>
     <Header />
     <div class="py-6 px-12">
-      <p>Search "{{ this.slug }}"</p>
+      <h1>Search "{{ this.slug }}"</h1>
     </div>
     <div class="desktop mx-12 my-3">
       <div class="grid grid-cols-5 gap-4 mb-10" v-if="products.length > 0">

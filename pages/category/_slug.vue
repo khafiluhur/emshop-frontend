@@ -8,9 +8,9 @@
         </nuxt-link>
         <p class="mx-4" style="color: #999999">></p>
         <nuxt-link :to="'/category/' + this.categories.slug">
-          <p class="font-bold" style="color: #999999">
+          <h1 class="font-bold" style="color: #999999">
             {{ this.categories.name }}
-          </p>
+          </h1>
         </nuxt-link>
       </div>
     </div>
