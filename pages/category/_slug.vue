@@ -47,17 +47,17 @@ const headers = {
 export default {
   name: 'Category',
   components: { Header, CategoryItem, Description, Footer, NavigationBar },
-  head() {
-    return {
-      title: this.title + ' | EMSHOP',
-    }
-  },
   data() {
     return {
       categories: [],
       title: '',
       slug: this.$route.params.slug,
       path: process.env.API_URL,
+    }
+  },
+  head() {
+    return {
+      title: this.title + ' | EMSHOP',
     }
   },
   async created() {

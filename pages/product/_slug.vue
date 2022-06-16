@@ -33,12 +33,12 @@
               <div class="image-product"></div>
             </div>
             <div class="">
-              <h3
+              <h1
                 class="title-product font-bold mb-2"
                 v-if="this.products.length != 0"
               >
                 {{ this.products.name }}
-              </h3>
+              </h1>
               <div class="mb-2 title-product-loading" v-else></div>
               <h3
                 class="text-code-item text-start pb-3 mb-2"
@@ -372,12 +372,12 @@
                   </div>
                 </div>
               </div>
-              <h3
+              <h1
                 class="text-code-item text-start mb-2"
                 v-if="this.products.length != 0"
               >
                 Kode item: {{ this.products.sku }}
-              </h3>
+              </h1>
               <div class="pb-3 mb-2 title-code-product-loading" v-else></div>
               <h3
                 class="title-product-mobile font-bold mb-2"
@@ -636,11 +636,6 @@ const headers = {
 export default {
   name: 'Product',
   components: { Header, RandomItem, Footer, NavigationBar, VueSlickCarousel },
-  head() {
-    return {
-      title: this.title + ' | EMSHOP',
-    }
-  },
   data() {
     return {
       mobile_settings: {
@@ -656,6 +651,11 @@ export default {
       slug: this.$route.params.slug,
       path: process.env.API_URL,
       eco: '',
+    }
+  },
+  head() {
+    return {
+      title: this.title + ' | EMSHOP',
     }
   },
   async created() {

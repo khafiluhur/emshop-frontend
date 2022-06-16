@@ -93,6 +93,11 @@ export default {
       list: 'all',
     }
   },
+  head() {
+    return {
+      title: this.slug + ' | EMSHOP',
+    }
+  },
   async created() {
     try {
       axios

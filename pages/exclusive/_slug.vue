@@ -23,15 +23,15 @@ export default {
     Footer,
     NavigationBar,
   },
-  head() {
-    return {
-      title: this.slug + ' | EMSHOP',
-    }
-  },
   data() {
     return {
       title: '',
       slug: this.$route.params.slug,
+    }
+  },
+  head() {
+    return {
+      title: this.slug + ' | EMSHOP',
     }
   },
 }
