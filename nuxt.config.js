@@ -56,16 +56,21 @@ export default {
 
   firebase: {
     config: {
-      apiKey: 'AIzaSyAWrubSv4BDnEXxFtYyMePfhbbW_LdacSc',
-      authDomain: 'emshop-f9674.firebaseapp.com',
-      projectId: 'emshop-f9674',
-      storageBucket: 'emshop-f9674.appspot.com',
-      messagingSenderId: '529804743553',
-      appId: '1:529804743553:web:3a1c8686a068cfa0b4ce80',
-      measurementId: 'G-Q1MQZ5JGJY',
+      apiKey: 'AIzaSyDpMR1G_vgd7rTKCWhGE1x6ZmAnnovV8So',
+      authDomain: 'mshop-281421.firebaseapp.com',
+      databaseURL: 'https://mshop-281421.firebaseio.com',
+      projectId: 'mshop-281421',
+      storageBucket: 'mshop-281421.appspot.com',
+      messagingSenderId: '883010839079',
+      appId: '1:883010839079:web:251562d5eb2c35f7366402',
+      measurementId: 'G-MNLG0CS9MH',
     },
     services: {
-      storage: true,
+      performance: true,
+      analytics: true,
+    },
+    analytics: {
+      collectionEnabled: true, // default
     },
   },
 
