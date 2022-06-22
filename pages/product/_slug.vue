@@ -95,16 +95,15 @@
                   </div>
                 </div>
               </div>
-              <div class="">
+              <div class="mb-6">
                 <hr />
               </div>
               <span v-if="this.products.length != 0">
                 <p
+                  v-html="this.products.short_desc"
                   class="text-start title-product-desc"
                   :class="{ container_desc: isActive }"
-                >
-                  {{ this.products.short_desc }}
-                </p>
+                ></p>
                 <p
                   class="btnSee"
                   :class="{ hidden: isActive }"
@@ -391,11 +390,10 @@
               </div>
               <span v-if="this.products.length != 0">
                 <p
+                  v-html="this.products.short_desc"
                   class="text-start title-product-desc-mobile"
                   :class="{ container_desc: isActive }"
-                >
-                  {{ this.products.short_desc }}
-                </p>
+                ></p>
                 <p
                   class="btnSee-mobile"
                   :class="{ hidden: isActive }"
@@ -652,6 +650,13 @@ export default {
       path: process.env.API_URL,
       eco: '',
     }
+  },
+  computed: {
+    libText: function () {
+      // return directly html
+      var str = '<div><p>some html</p></div>'
+      return str
+    },
   },
   head() {
     return {
@@ -962,5 +967,9 @@ export default {
 .text-normal-price {
   color: black;
   font-size: 18px;
+}
+title-product-desc-mobile p iframe {
+  width: 100%;
+  height: 100%;
 }
 </style>

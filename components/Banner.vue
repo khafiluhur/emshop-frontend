@@ -145,6 +145,7 @@ export default {
 }
 .slick-slide img {
   width: 100%;
+  height: 100%;
 }
 @-webkit-keyframes shine {
   to {

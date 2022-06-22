@@ -52,7 +52,9 @@
               </div>
               <div class="card-body" v-else>
                 <h5 class="card-title font-bold">{{ product.name }}</h5>
-                <h5 class="card-text font-bold">Rp.{{ product.disc_price }}</h5>
+                <h5 class="card-text font-bold no-disc_price">
+                  Rp.{{ product.disc_price }}
+                </h5>
               </div>
             </NuxtLink>
           </div>

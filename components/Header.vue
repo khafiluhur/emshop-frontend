@@ -107,7 +107,7 @@
           <hr class="mx-10" />
         </div>
 
-        <NuxtLink :to="'/search?q=' + myInput">
+        <NuxtLink :to="'search/?search=' + myInput">
           <div
             class="p-4 text-center"
             style="background-color: #3374dd; color: white"
