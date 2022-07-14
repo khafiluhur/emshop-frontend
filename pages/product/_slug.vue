@@ -150,9 +150,9 @@
                             class="shadow-sm border border-1 aladin-order btn-order"
                           >
                             <img
-                              class="p-1 mx-auto block"
-                              width="35"
-                              src="../../static/product/aladin.svg"
+                              class="mx-auto block"
+                              width="61"
+                              src="../../static/product/1.png"
                               alt=""
                             />
                           </div>
@@ -171,9 +171,9 @@
                             class="shadow-sm border border-1 tokopedia-order btn-order"
                           >
                             <img
-                              class="p-1 mt-1 mx-auto block"
-                              width="35"
-                              src="../../static/product/tokopedia.svg"
+                              class="mx-auto block"
+                              width="61"
+                              src="../../static/product/2.png"
                               alt=""
                             />
                           </div>
@@ -192,9 +192,9 @@
                             class="shadow-sm border border-1 shopee-order btn-order"
                           >
                             <img
-                              class="p-1 mt-1 mx-auto block"
-                              width="35"
-                              src="../../static/product/shopee.svg"
+                              class="mx-auto block"
+                              width="61"
+                              src="../../static/product/3.png"
                               alt=""
                             />
                           </div>
@@ -213,9 +213,9 @@
                             class="shadow-sm border border-1 lazada-order btn-order"
                           >
                             <img
-                              class="p-1 mt-1 mx-auto block"
-                              width="40"
-                              src="../../static/product/lazada.svg"
+                              class="mx-auto block"
+                              width="61"
+                              src="../../static/product/4.png"
                               alt=""
                             />
                           </div>
@@ -234,9 +234,9 @@
                             class="shadow-sm border border-1 blibli-order btn-order"
                           >
                             <img
-                              class="p-1 mt-1 mx-auto block"
-                              width="35"
-                              src="../../static/product/blibli.svg"
+                              class="mx-auto block"
+                              width="61"
+                              src="../../static/product/5.png"
                               alt=""
                             />
                           </div>
@@ -255,9 +255,9 @@
                             class="shadow-sm border border-1 bukalapak-order btn-order text-center"
                           >
                             <img
-                              class="p-1 mt-1 mx-auto"
-                              width="40"
-                              src="../../static/product/bukalapak.svg"
+                              class="mx-auto"
+                              width="61"
+                              src="../../static/product/6.png"
                               alt=""
                             />
                           </div>
@@ -971,5 +971,8 @@ export default {
 title-product-desc-mobile p iframe {
   width: 100%;
   height: 100%;
+}
+.title-product-desc .container_desc ul {
+  list-style-type: circle;
 }
 </style>
