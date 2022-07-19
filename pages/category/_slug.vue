@@ -2,6 +2,17 @@
   <div>
     <Header />
     <div class="desktop">
+      <div class="mb-5 m-11" v-if="categories.length != 0">
+        <img
+          class="rounded-3xl"
+          style="width: 100%"
+          :src="path + '/assets/imgs/category/' + this.categories.img"
+          alt=""
+        />
+      </div>
+      <div v-else>
+        <div class="banner-category"></div>
+      </div>
       <div class="mx-12 mt-10 flex">
         <nuxt-link to="/">
           <p style="color: #999999">Home</p>
