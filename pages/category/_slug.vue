@@ -38,7 +38,17 @@
       </div>
     </div>
     <CategoryItem />
-    <Description />
+    <div class="mx-12 my-5">
+      <div class="desktop">
+        <div class="mb-10">
+          <p v-html="this.categories.description"></p>
+        </div>
+        <div class="mb-5 m">
+          <div class="striped-border"></div>
+        </div>
+      </div>
+      <div class="mobile"></div>
+    </div>
     <Footer />
     <NavigationBar />
   </div>
@@ -47,7 +57,6 @@
 <script>
 import Header from '../../components/Header'
 import CategoryItem from '../../components/CategoryItem'
-import Description from '../../components/Description'
 import Footer from '../../components/Footer'
 import NavigationBar from '../../components/NavigationBar'
 
@@ -57,7 +66,7 @@ const headers = {
 }
 export default {
   name: 'Category',
-  components: { Header, CategoryItem, Description, Footer, NavigationBar },
+  components: { Header, CategoryItem, Footer, NavigationBar },
   data() {
     return {
       categories: [],
@@ -97,5 +106,8 @@ export default {
   width: 100%;
   height: 560px;
   background-size: 100% 100%;
+}
+strong {
+  font-weight: bold !important;
 }
 </style>
