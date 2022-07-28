@@ -192,7 +192,6 @@ export default {
         this.path + '/api/product/exclusive/bestSeller',
         {
           headers: headers,
-          ß,
         }
       )
       this.products = res.data.data.data
