@@ -188,12 +188,10 @@ export default {
   },
   async created() {
     try {
-      const res = await axios.get(
-        this.path + '/api/product/exclusive/bestSeller',
-        {
-          headers: headers,
-        }
-      )
+      const res = await axios.get(this.path + '/api/product/exclusive/test', {
+        headers: headers,
+        ß,
+      })
       this.products = res.data.data.data
     } catch (error) {}
   },
