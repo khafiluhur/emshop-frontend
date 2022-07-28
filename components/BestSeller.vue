@@ -7,7 +7,7 @@
             <p class="text-title font-bold">Terlaris</p>
           </div>
           <div class="my-auto">
-            <nuxt-link to="/exclusive/bestSeller" class="mx-3 font-light">
+            <nuxt-link to="/exclusive/test" class="mx-3 font-light">
               Lihat Semua
             </nuxt-link>
           </div>
