@@ -2,9 +2,7 @@
   <div class="">
     <div class="desktop mx-12 my-10">
       <div class="mt-10 mb-10 text-center" v-if="this.products.length != 0">
-        <p class="font-bold text-title" v-if="this.slug == 'bestSeller'">
-          Terlaris
-        </p>
+        <p class="font-bold text-title" v-if="this.slug == 'test'">Terlaris</p>
         <p class="font-bold text-title" v-else-if="this.slug === 'newItem'">
           Terbaru
         </p>
