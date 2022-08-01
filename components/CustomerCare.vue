@@ -11,12 +11,15 @@
           Email : cs.mncshop@mncgroup.com
         </p>
         <p class="mb-2 text-center">
-          Direktorat Jenderal Perlindungan Konsumen dan Tertib Niaga Kementerian
-          Perdagangan Republik Indonesia
+          Direktorat Jenderal Perlindungan Konsumen dan Tertib Niaga
+        </p>
+        <p class="mb-2 text-center">
+          Kementerian Perdagangan Republik Indonesia
         </p>
         <div class="mb-5 text-center">
-          <p style="color: #6d7588">Whatsapp Ditjen PKTN :</p>
-          <p style="color: #f37727">0853 1111 1010</p>
+          <p style="color: #6d7588">
+            Whatsapp Ditjen PKTN : <a style="color: #f37727">0853 1111 1010</a>
+          </p>
         </div>
       </div>
       <div class="mb-5 mx-12">
@@ -34,12 +37,15 @@
           Email : cs.mncshop@mncgroup.com
         </p>
         <p class="mb-2 text-center">
-          Direktorat Jenderal Perlindungan Konsumen dan Tertib Niaga Kementerian
-          Perdagangan Republik Indonesia
+          Direktorat Jenderal Perlindungan Konsumen dan Tertib Niaga
+        </p>
+        <p class="mb-2 text-center">
+          Kementerian Perdagangan Republik Indonesia
         </p>
         <div class="mb-5 text-center">
-          <p style="color: #6d7588">Whatsapp Ditjen PKTN :</p>
-          <p style="color: #f37727">0853 1111 1010</p>
+          <p style="color: #6d7588">
+            Whatsapp Ditjen PKTN : <a style="color: #f37727">0853 1111 1010</a>
+          </p>
         </div>
       </div>
       <div class="mx-2 my-5">
