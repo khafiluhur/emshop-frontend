@@ -5,15 +5,18 @@
         <img src="../static/contact-us.jpeg" />
       </div>
       <div class="mx-96">
-        <h1 class="mb-5 font-bold">PT MNC GS HOMESHOPPING</h1>
-        <p class="mb-5">
-          MNC Tower Lt.20 Jl. Kebon Sirih No.17-19 Menteng Jakarta Pusat 10340
-          Indonesia
+        <h1 class="mb-2 font-bold text-center">Layanan Pengaduan Konsumen</h1>
+        <p class="mb-2 text-center">PT MNC GS HOMESHOPPING</p>
+        <p class="mb-2 text-center" style="color: #6d7588">
+          Email : cs.mncshop@mncgroup.com
         </p>
-        <p class="mb-5">Tel. +62 21 1500887</p>
-        <div class="mb-5">
-          <p>Email :</p>
-          <p>cs.mncshop@mncgroup.com</p>
+        <p class="mb-2 text-center">
+          Direktorat Jenderal Perlindungan Konsumen dan Tertib Niaga Kementerian
+          Perdagangan Republik Indonesia
+        </p>
+        <div class="mb-5 text-center">
+          <p style="color: #6d7588">Whatsapp Ditjen PKTN :</p>
+          <p style="color: #f37727">0853 1111 1010</p>
         </div>
       </div>
       <div class="mb-5 mx-12">
@@ -25,15 +28,18 @@
         <img src="../static/contact-us.jpeg" />
       </div>
       <div class="mx-2 my-5">
-        <h1 class="mb-5 font-bold">PT MNC GS HOMESHOPPING</h1>
-        <p class="mb-5">
-          MNC Tower Lt.20 Jl. Kebon Sirih No.17-19 Menteng Jakarta Pusat 10340
-          Indonesia
+        <h1 class="mb-2 font-bold text-center">Layanan Pengaduan Konsumen</h1>
+        <p class="mb-2 text-center">PT MNC GS HOMESHOPPING</p>
+        <p class="mb-2 text-center" style="color: #6d7588">
+          Email : cs.mncshop@mncgroup.com
         </p>
-        <p class="mb-5">Tel. +62 21 1500887</p>
-        <div class="mb-5">
-          <p>Email :</p>
-          <p>cs.mncshop@mncgroup.com</p>
+        <p class="mb-2 text-center">
+          Direktorat Jenderal Perlindungan Konsumen dan Tertib Niaga Kementerian
+          Perdagangan Republik Indonesia
+        </p>
+        <div class="mb-5 text-center">
+          <p style="color: #6d7588">Whatsapp Ditjen PKTN :</p>
+          <p style="color: #f37727">0853 1111 1010</p>
         </div>
       </div>
       <div class="mx-2 my-5">
