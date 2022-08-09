@@ -107,14 +107,14 @@
           <hr class="mx-10" />
         </div>
 
-        <NuxtLink :to="'search/?search=' + myInput">
+        <a :to="'search?search=' + myInput" @click="reload">
           <div
             class="p-4 text-center"
             style="background-color: #3374dd; color: white"
           >
             Tampilkan Semua
           </div>
-        </NuxtLink>
+        </a>
       </div>
     </div>
     <div class="mobile">
@@ -135,6 +135,8 @@
 </template>
 
 <script>
+import { resolve } from 'path'
+
 const axios = require('axios').default
 const headers = {
   Authorization: process.env.API_KEY,
@@ -166,9 +168,18 @@ export default {
               },
               headers: headers,
             })
-            .then((resp) => {
-              ;(this.datas = resp.data.data.data), (this.isSearch = false)
-            })
+            .then(
+              (resp) =>
+                new Promise((resolve) =>
+                  setTimeout(
+                    resolve(
+                      (this.datas = resp.data.data.data),
+                      (this.isSearch = false)
+                    ),
+                    3000
+                  )
+                )
+            )
         } catch (error) {}
         if (this.datas.length != 0) {
           try {
@@ -180,9 +191,18 @@ export default {
                 },
                 headers: headers,
               })
-              .then((resp) => {
-                ;(this.datas = resp.data.data.data), (this.isSearch = false)
-              })
+              .then(
+                (resp) =>
+                  new Promise((resolve) =>
+                    setTimeout(
+                      resolve(
+                        (this.datas = resp.data.data.data),
+                        (this.isSearch = false)
+                      ),
+                      3000
+                    )
+                  )
+              )
           } catch (error) {}
         } else {
           this.isSearch = true
@@ -193,6 +213,9 @@ export default {
     },
     back() {
       this.$router.go(-1)
+    },
+    reload() {
+      console.log('reload')
     },
   },
 }
