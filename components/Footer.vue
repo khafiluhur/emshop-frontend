@@ -47,7 +47,7 @@
                 <img width="30" src="../static/payment/alto.png" alt="" />
               </div>
               <div class="col text-center">
-                <img width="30" src="../static/payment/prima.png" alt="" />
+                <img width="30" src="../static/payment/prima1.png" alt="" />
               </div>
               <div class="col text-center">
                 <img width="50" src="../static/payment/BCAKlikPay.png" alt="" />

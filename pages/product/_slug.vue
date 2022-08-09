@@ -257,7 +257,7 @@
                             <img
                               class="mx-auto"
                               width="61"
-                              src="../../static/product/6.png"
+                              src="../../static/product/61.png"
                               alt=""
                             />
                           </div>
@@ -523,7 +523,7 @@
                             <img
                               class="mx-auto"
                               width="61"
-                              src="../../static/product/6.png"
+                              src="../../static/product/61.png"
                               alt=""
                             />
                           </div>
