@@ -7,7 +7,7 @@
             <p class="text-title font-bold">Terlaris</p>
           </div>
           <div class="my-auto">
-            <nuxt-link to="/exclusive/test" class="mx-3 font-light">
+            <nuxt-link to="/exclusive/bestSeller" class="mx-3 font-light">
               Lihat Semua
             </nuxt-link>
           </div>
@@ -188,9 +188,12 @@ export default {
   },
   async created() {
     try {
-      const res = await axios.get(this.path + '/api/product/exclusive/test', {
-        headers: headers,
-      })
+      const res = await axios.get(
+        this.path + '/api/product/exclusive/bestSeller',
+        {
+          headers: headers,
+        }
+      )
       this.products = res.data.data.data
     } catch (error) {}
   },
