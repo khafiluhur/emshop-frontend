@@ -38,11 +38,11 @@
           </div>
         </div>
         <div class="my-auto">
-          <NuxtLink to="/streaming" class="mx-3 font-light text-menu"
-            >Streaming</NuxtLink
+          <a target="_blank" :href="this.streaming" class="mx-3 font-light text-menu"
+            >Streaming</a
           >
-          <NuxtLink to="/jadi-mitra" class="mx-3 font-light text-menu"
-            >Jadi Mitra</NuxtLink
+          <a target="_blank" :href="this.reseller" class="mx-3 font-light text-menu"
+            >Jadi Mitra</a
           >
           <NuxtLink to="/customer-care" class="mx-3 font-light text-menu"
             >Customer Care</NuxtLink
@@ -152,6 +152,8 @@ export default {
       path: process.env.API_URL,
       isSearch: true,
       list: '',
+      streaming: 'https://lifestyle.okezone.com/flashsale',
+      reseller: 'https://reseller.emshop.id/'
     }
   },
   mounted() {},
