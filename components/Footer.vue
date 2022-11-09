@@ -59,9 +59,6 @@
                     <img width="50" src="../static/payment/kredivo.svg" alt="" />
                 </div>
                 <div class="col text-center">
-                    <img width="50" src="../static/payment/indodana.png" alt="" />
-                </div>
-                <div class="col text-center">
                     <img width="50" src="../static/payment/alfamart.svg" alt="" />
                 </div>
                 <div class="col text-center">
